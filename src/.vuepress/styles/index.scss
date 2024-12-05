@@ -1,0 +1,35 @@
+// place your custom styles here
+// 首页图片完全全屏
+.vp-page.vp-blog-home{
+    padding-top: 0px;
+    .vp-blog-hero.fullscreen{
+        height: 100vh;
+    }
+}
+// 导航栏背景改为透明
+.vp-navbar{
+    background-color: #00000000;
+}
+// 头像logo改为圆形
+.vp-blogger-avatar, .vp-nav-logo{
+    border-radius: 50%;
+}
+// 隐藏编辑此页链接
+.vp-meta-item.edit-link{
+    display: none;
+}
+// 更改hint样式
+.hint-container{
+    border: .1rem solid var(--hint-c-title) !important;
+}
+// bug fix for nav-screen media-icon image
+.vp-nav-screen img.icon{
+    vertical-align: middle; 
+    height: 100%;
+}
+// bug fix for toc-wrapper margin jump with open class
+.vp-toc-wrapper{
+    &.open{
+        margin-top: 0;
+    }
+}
