@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://nekoblog.chairo.com/sitemap.xml
+Sitemap: https://nekoblog.chairo.cc/sitemap.xml
