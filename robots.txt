@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://nekoblog.chairo.com/sitemap.xml
