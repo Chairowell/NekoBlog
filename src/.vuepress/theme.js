@@ -4,12 +4,12 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://nekoblog.chairo.com",
+  hostname: "https://nekoblog.chairo.cc",
   favicon: "/NyanCat.gif",
 
   author: {
     name: "Chairowell",
-    url: "https://nekoblog.chairo.com",
+    url: "https://nekoblog.chairo.cc",
   },
 
   iconAssets: "iconify",
