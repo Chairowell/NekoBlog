@@ -67,9 +67,9 @@ export default hopeTheme({
     comment: {
       provider: "Giscus",
       repo: "Chairowell/NekoBlog",
-      repoId: "R_kgDONZaJ8Q",
+      repoId: "R_kgDONZggkg",
       category: "Announcements",
-      categoryId: "DIC_kwDONZaJ8c4Ck8hU",
+      categoryId: "DIC_kwDONZggks4Ck8_J",
       mapping: "title",
       inputPosition: "bottom",
     },
