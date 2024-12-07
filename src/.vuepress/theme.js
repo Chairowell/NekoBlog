@@ -27,7 +27,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: `什么都想做馁喵~`,
+  footer: `什么都想做馁喵~<img  src="//sstatic1.histats.com/0.gif?4915067&101" alt="" border="0">`,
   copyright: `Copyright © 2022-${new Date().getFullYear()} Chairowell`,
   displayFooter: true,
 
