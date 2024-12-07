@@ -14,7 +14,7 @@ export default hopeTheme({
 
   iconAssets: "iconify",
 
-  logo: "logo.jpg",
+  logo: "chairowell.jpg",
 
   repo: "chairowell/NekoBlog",
 
