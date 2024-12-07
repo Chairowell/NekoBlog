@@ -30,8 +30,8 @@ title: 这是一个测试页
 
 ## 特殊格式文本 ✓
 
-**加粗**
-*斜体*
+**加粗** __加粗__  
+*斜体* _斜体_  
 ~~删除线~~
 
 @[code{33-35} md:no-line-numbers](./helloworld.md)
@@ -134,7 +134,7 @@ ___
 @[code{125-132} md:no-line-numbers](./helloworld.md)
 
 > [!warning]
-> 如果一段文字后紧跟着 `---` 类型的分割线，这会和文字一并渲染成一个 `<h2标签>`
+> 如果一段文字后紧跟着 `---` 类型的分割线，这会和上面的文字一起渲染成一个 `<h2标签>`
 >
 > 这行文字会被渲染成H2标签
 > ---
@@ -151,3 +151,100 @@ ___
 >
 > ---
 > ```
+
+> [!tip]
+> 和上方注意的写法类似，如果一段文字后紧跟着 `===` ，这会和上方的文字一起渲染成一个 `<h1标签>`
+> 
+> 这行文字会被渲染成H1标签
+> ===
+>
+> 这只是一行普通文字，不会被渲染成标签
+>
+> ===
+>
+> ```md:no-line-numbers
+> 这行文字会被渲染成h1标签
+> ===
+>
+> 这只是一行普通文字，不会被渲染成标签
+>
+> ===
+> ```
+
+## 链接 ✓
+
+[相对路径链接](./README.md)
+
+[绝对路径链接](/NyanCat.gif)
+
+[外部链接](https://nekoblog.chairo.cc)
+
+##### 这是一个测试用的锚点
+
+[锚点链接](#你好像跳到这里了)
+
+@[code{176-184} md:no-line-numbers](./helloworld.md)
+
+## 图片 ✓
+
+这是一张内部链接的图片:
+
+![Here is a NyanCat](/NyanCat.gif)
+___
+
+这是一张外部链接的图片:
+
+![This is one of my favorite artistic's work](https://img.picgo.net/2024/11/20/-014eab7f7b3e0df2e6.jpg)
+___
+
+这站图片会紧跟在这个文字后面
+![Here is a NyanCat](/NyanCat.gif)
+不会单独成行，而且不会显示图片标题
+___
+
+这张图片会单独成行
+
+![This is one of my favorite artistic's work](https://img.picgo.net/2024/11/20/-014eab7f7b3e0df2e6.jpg "图片标题" =200x)
+
+而且会显示图片标题，并且设置图片宽度为200px
+___
+
+设置图片高度为250px
+
+![This is one of my favorite artistic's work](https://img.picgo.net/2024/11/20/-014eab7f7b3e0df2e6.jpg "Picture Title" =x250)
+___
+
+设置图片宽度为300px，高度为100px
+
+![Here is a NyanCat](/NyanCat.gif =300x100)
+
+@[code{190-219} md:no-line-numbers](./helloworld.md)
+
+> [!tip]
+> 为了显示清楚以上图片之间加了 `___` 分割线隔开
+
+## emoji ✓
+
+标准写法：
+:wink: :cry: :laughing: :yum:
+
+老式写法：
+8-) :)  :( :-) :-( ;)
+
+@[code{226-232} md:no-line-numbers](./helloworld.md)
+
+## 表格 ✓
+
+|     居中      |         右对齐 | 左对齐         |
+| :-----------: | -------------: | :------------- |
+| 居中使用 `:-:` | 右对齐使用 `-:` | 左对齐使用 `:-` |
+|       b       |      aaaaaaaaa | aaaa           |
+|       c       |           aaaa | a              |
+|![](/NyanCat.gif)|表格里可以使用图片|                |
+
+@[code{238-243} md:no-line-numbers](./helloworld.md)
+
+##### 你好像跳到这里了
+[转跳回去](#这是一个测试用的锚点)
+
+@[code{} md:no-line-numbers](./helloworld.md)

@@ -10,10 +10,10 @@ bgImage: https://img.picgo.net/2024/09/07/ee616e79d7910502b35cfff3232b6709150300
 bgImageDark: https://img.picgo.net/2024/09/07/536b9ee68eb212bfdb0cc47d5740e35f1503006f897fca4ceec932.jpg
 tagline: ヾ(≧▽≦*)o 什么都想做馁喵~
 # projects:
-#   - icon: project
-#     name: 项目名称
-#     desc: 项目详细描述
-#     link: https://你的项目链接
+#   - icon: line-md:account
+#     name: Who am I?
+#     desc: 是一只栗子啊
+#     link: 
 
 #   - icon: link
 #     name: 链接名称
