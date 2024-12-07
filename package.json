@@ -18,5 +18,8 @@
     "vue": "^3.5.12",
     "vuepress": "2.0.0-rc.18",
     "vuepress-theme-hope": "2.0.0-rc.59"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.3"
   }
 }
