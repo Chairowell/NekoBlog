@@ -22,6 +22,33 @@
 .hint-container{
     border: .1rem solid var(--hint-c-title) !important;
 }
+// 分类样式
+.page-category-item{
+    padding: 0 0.3rem;
+    border: 0.1rem solid;
+    line-height: 1.5;
+}
+.page-tag-item{
+    border: 0.1rem solid;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    background: none !important;
+    padding: 0 0.5rem;
+}
+// 文字选择样式
+// ::selection {
+//     background-color: var(--vp-c-accent);
+//     color: #fff;
+// }
+// 滚动条样式
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+}
 // bug fix for nav-screen media-icon image
 .vp-nav-screen img.icon{
     vertical-align: middle; 
@@ -32,4 +59,9 @@
     &.open{
         margin-top: 0;
     }
+}
+// bug fix for media-icon hover effect
+.vp-social-media:hover img{
+    transform: scale(1.1, 1.1);
+    transition: transform var(--vp-t-transform);
 }
