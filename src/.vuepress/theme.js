@@ -17,14 +17,23 @@ export default hopeTheme({
   logo: "chairowell.jpg",
 
   repo: "chairowell/NekoBlog",
+  repoDisplay: false,
 
   docsDir: "src",
 
   // 导航栏
   navbar,
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Language", "Repo", "Outlook", "Search"],
+  },
 
   // 侧边栏
   sidebar,
+
+  // 编辑此页链接
+  editLink: false,
 
   // 页脚
   footer: `什么都想做馁喵~<img  src="//sstatic1.histats.com/0.gif?4915067&101" alt="" border="0">`,
@@ -34,17 +43,25 @@ export default hopeTheme({
   // 博客相关
   blog: {
     description: "",
-    // intro: "/intro.html",
+    intro: "/intro.html",
     // sidebarDisplay: "mobile",
     // articlePerPage: 10,
+    timeline: "摸鱼也挺快乐的说_(:зゝ∠)_",
     medias: {
       GitHub: "https://github.com/chairowell",
       NeteaseCloudMusic: {
         icon: "https://s1.music.126.net/style/favicon.ico",
         link: "https://music.163.com/#/user/home?id=5079761200",
       },
+      // "163Music": "https://music.163.com/#/user/home?id=5079761200",
       BiliBili: "https://space.bilibili.com/84378256",
       Twitter: "https://x.com/chairowell",
+      AFdian: {
+        icon: "https://static.afdiancdn.com/favicon.ico",
+        link: "https://ifdian.net/a/chairowell",
+      },
+      // "AFDian": "https://ifdian.net/a/chairowell",
+  
       // Discord: "https://example.com",
       // Gmail: "mailto:chairowell@gmail.com",
     },

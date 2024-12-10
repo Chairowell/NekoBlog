@@ -14,13 +14,36 @@
 .vp-blogger-avatar, .vp-nav-logo{
     border-radius: 50%;
 }
-// 隐藏编辑此页链接
-.vp-meta-item.edit-link{
-    display: none;
+// // 隐藏编辑此页链接
+// .vp-meta-item.edit-link{
+//     display: none;
+// }
+.vp-social-media{
+    .icon{
+        border-radius: 100px;
+    }
+}
+.vp-blogger-name{
+    font-weight: 600;
+}
+.vp-article-wrapper{
+    .route-link{
+        .vp-article-title{
+            font-weight: 700;
+            font-size: 2rem;
+            // h1 font-siz is 2.2rem
+        }
+        .vp-article-title::after{
+            height: 3px;
+        }
+    }
 }
 // 更改hint样式
 .hint-container{
     border: .1rem solid var(--hint-c-title) !important;
+    // &.details{
+    //     border: .1rem solid var(--vp-c-text) !important;
+    // }
 }
 // 分类样式
 .page-category-item{
@@ -36,6 +59,10 @@
     background: none !important;
     padding: 0 0.5rem;
 }
+.vp-tag{
+    border-radius: 100px;
+    padding: 6px 12px;
+}
 // 文字选择样式
 // ::selection {
 //     background-color: var(--vp-c-accent);
@@ -50,9 +77,11 @@
     border-radius: 2px;
 }
 // bug fix for nav-screen media-icon image
-.vp-nav-screen img.icon{
-    vertical-align: middle; 
-    height: 100%;
+.vp-social-media{
+    img.icon {
+        vertical-align: initial;
+        height: 100%;
+    }
 }
 // bug fix for toc-wrapper margin jump with open class
 .vp-toc-wrapper{
