@@ -1,6 +1,6 @@
 ---
 title: 如何编写一个 Cloudflare Worker
-cover: /cloudflare.png
+cover: assets/images/cloudflare.png
 date: 2024-12-10 15:00:00
 categories:
   - 教程
