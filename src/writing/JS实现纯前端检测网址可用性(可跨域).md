@@ -47,11 +47,11 @@ function statusURL(url) {
     }
   }
 
-  var xmlhttp = getXmlHttpRequest();
-  xmlhttp.open("GET", url, true);    // 第三个参数true表示使用异步请求
-  xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState === 4) {  // 4表示表示请求已完成且响应已到达
-      if (xmlhttp.status === 200) {
+  var xhr = getXmlHttpRequest();
+  xhr.open("GET", url, true);    // 第三个参数true表示使用异步请求
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {  // 4表示表示请求已完成且响应已到达
+      if (xhr.status === 200) {
         console.log("URL 可用");
       } else {
         console.log("URL 不可用");
@@ -59,21 +59,21 @@ function statusURL(url) {
     }
   };
   
-  xmlhttp.onerror = function () {
+  xhr.onerror = function () {
     console.log("请求发生错误");
   };
 
-  xmlhttp.send();
+  xhr.send();
 }
 
 statusURL("http://127.0.0.1:5500/");  // 本地LiveServer服务
-statusURL("http://www.example.com/");  // 未被墙网站
+statusURL("https://www.baidu.com/");  // 未被墙网站
 statusURL("http://www.google.com/");  // 被墙网站
 ```
 
 ::: details 查看运行结果
 ![http://127.0.0.1:5500/](./JS实现纯前端检测网址可用性(可跨域).assets/02.png)
-![http://www.example.com/](./JS实现纯前端检测网址可用性(可跨域).assets/03.png)
+![https://www.baidu.com/](./JS实现纯前端检测网址可用性(可跨域).assets/03.png)
 ![http://www.google.com/](./JS实现纯前端检测网址可用性(可跨域).assets/04.png)
 :::
 
@@ -94,7 +94,8 @@ statusURL("http://www.google.com/");  // 被墙网站
 > 其实我们向Google发送的请求是成功的，不过由于协议头的原因，Google的服务器想让我们重定向到 `https://www.google.com/`，所以返回了 `302` 响应码。
 > 
 > 当我们尝试 `https://www.google.com/` 时，响应码就会变成 `200`
-> ![](./JS实现纯前端检测网址可用性(可跨域).assets/06.png)
+> 
+> ![https://www.google.com/](./JS实现纯前端检测网址可用性(可跨域).assets/06.png)
 
 ::: details **这里有一种更好的写法**
 
