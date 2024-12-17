@@ -1,38 +1,39 @@
 ---
-title: JS实现纯前端检测网址可用性(可跨域CROS)
+title: JS实现纯前端检测网址可用性(可跨域CORS)
 date: 2022-07-24
 tags:
   - Javascript
-  - CROS
+  - CORS
 star: 1
 isOriginal: true
 sticky: 1
 ---
-**本文章为旧备份，还在重新整理中**
 
-# JS实现纯前端检测网址可用性(可跨域CROS)
+# JS实现纯前端检测网址可用性(可跨域CORS)
 
-前段时间在完善自己的导航网页，因为里面有很多资源是临时或国外的，而且我不会经常去主动检测已有链接的可用性 ~~（因为懒）~~ ，所以想写个JS用来帮助我检测，以便发现和及时更新。
+前段时间在完善自己的导航网页，因为里面有很多资源是临时或国外的，而且不会主动检测已有链接的可用性 ~~（因为懒）~~ ，所以想写个JS用来帮助我检测，以便发现和及时更新。
 
-但，是写前端还是后端呢？上网搜了搜类似案例，大多都是后端的，而且有详细的讲解。好！那就写后端吧，简单 ~~（有的抄）~~ ，就嘎嘎地写了一下，上线部署，更新资源。
+但，是写前端还是后端呢？上网搜了搜类似案例，大多都是后端的，而且有详细的讲解。好！那就写后端吧，简单 ~~（有的抄）~~ ，就嘎嘎地写了一下，检测，更新资源，上线部署。
 
-不久后有朋友跟我说：“你有很多(墙外)资源我还是打不开啊。” 
+不久后有朋友跟我说：“还是有很多(墙外)资源打不开啊。” 
 
 我：“......不是（无语到了）”
 
-每个人的网络环境都各不相同，有些资源上不去是正常，但如何让他们明白这可能是因为他们的网络环境问题呢？
+每个人的网络环境都各不相同，有些资源上不去也是正常，但如何让他们明白，这可能是因为他们的网络环境问题呢？
 
-能否在前端尝试Ping或类似的测试？
+我就在想，能否在前端尝试Ping或类似的测试呢？
 
 ## 方案一：通过响应码判断
 
 前端发送网络请求，最快想到的就是 `XMLHttpRequest` 、`Ajax` 、`Fetch API` 这三兄弟了。通过发起网络请求，获取响应码，然后根据响应码判断是否可用。
 
-![响应码判断](./JS实现纯前端检测网址可用性(可跨域).assets/01.png)
+![响应码判断](./JS实现纯前端检测网址可用性(可跨域CORS).assets/01.png)
 
 ### 用XMLHttpRequest发送请求
 
-> 什么是 XMLHttpRequest (XHR)：[XMLHttpRequest - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+> 什么是 XMLHttpRequest (XHR)：用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。
+> 
+> [XMLHttpRequest - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
 
 ```javascript
 function statusURL(url) {
@@ -66,36 +67,16 @@ function statusURL(url) {
   xhr.send();
 }
 
-statusURL("http://127.0.0.1:5500/");  // 本地LiveServer服务
+statusURL("http://localhost:5500/");  // 本地LiveServer服务
 statusURL("https://www.baidu.com/");  // 未被墙网站
-statusURL("http://www.google.com/");  // 被墙网站
+statusURL("https://www.google.com/");  // 被墙网站
 ```
 
 ::: details 查看运行结果
-![http://127.0.0.1:5500/](./JS实现纯前端检测网址可用性(可跨域).assets/02.png)
-![https://www.baidu.com/](./JS实现纯前端检测网址可用性(可跨域).assets/03.png)
-![http://www.google.com/](./JS实现纯前端检测网址可用性(可跨域).assets/04.png)
+![http://localhost:5500/](./JS实现纯前端检测网址可用性(可跨域CORS).assets/02.png)
+![https://www.baidu.com/](./JS实现纯前端检测网址可用性(可跨域CORS).assets/03.png)
+![https://www.google.com/](./JS实现纯前端检测网址可用性(可跨域CORS).assets/04.png)
 :::
-
-
-通过测试，可以看到在向同地址的服务器发请求时，返回了200响应码，则说明该地址可用。
-
-![CROS跨域错误](./JS实现纯前端检测网址可用性(可跨域).assets/05.png)
-
-但是向其他地址的服务器发请求时，发现浏览器抛出了CROS跨域错误，并没能实现我们需要的效果。
-
-> 什么是CORS跨域：[跨源资源共享（CORS） - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
-
-- `net::ERR_FAILED 200 (OK)` 在这里表示服务器响应成功，但是浏览器拒绝了访问。
-- `net::ERR_FAILED 302 (Found)` 在这里表示服务器响应重定向，但是浏览器拒绝了重定向。
-
-> [!TIP]
-> 这里 `http://www.google.com/` 的响应码是 `302`，而 `http://www.example.com/` 的响应码却是 `200`。
-> 其实我们向Google发送的请求是成功的，不过由于协议头的原因，Google的服务器想让我们重定向到 `https://www.google.com/`，所以返回了 `302` 响应码。
-> 
-> 当我们尝试 `https://www.google.com/` 时，响应码就会变成 `200`
-> 
-> ![https://www.google.com/](./JS实现纯前端检测网址可用性(可跨域).assets/06.png)
 
 ::: details **这里有一种更好的写法**
 
@@ -104,14 +85,14 @@ statusURL("http://www.google.com/");  // 被墙网站
 ```javascript
 function statusURL(url) {
   var xhr = new ( window.ActiveXObject || XMLHttpRequest )( 'Microsoft.XMLHTTP' );
-  xhr.open('HEAD', url, true);
-  xhr.timeout = 3000;
+  xhr.open('HEAD', url, true);  // 只发送HEAD请求，不发送实际数据
+  xhr.timeout = 3000;  // 设置超时时间
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4) {
       if ([200, 301, 302, 304, 307].includes(xhr.status)) {
-        console.log("URL 可用", xhr.status);
+        console.log("URL 可用，响应码：", xhr.status);
       } else {
-        console.log("URL 不可用", xhr.status);
+        console.log("URL 不可用，响应码：", xhr.status);
       }
     }
   }
@@ -121,50 +102,95 @@ function statusURL(url) {
   xhr.send();
 }
 
-statusURL("http://127.0.0.1:5500/");  // 本地LiveServer服务
+statusURL("http://localhost:5500/");  // 本地LiveServer服务
 statusURL("https://www.baidu.com/");  // 未被墙网站
 statusURL("https://www.google.com/");  // 被墙网站
 ```
 
-![运行结果](./JS实现纯前端检测网址可用性(可跨域).assets/07.png)
+![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/06.png)
 
 :::
 
+通过测试，可以看到在向同地址的服务器发请求时，返回了200响应码，则说明该地址可用。
+
+![CORS跨域错误](./JS实现纯前端检测网址可用性(可跨域CORS).assets/05.png)
+
+但是向其他地址的服务器发请求时，发现浏览器抛出了CORS跨域错误，并没能实现我们需要的效果。
+
+- `CORS policy: No 'Access-Control-Allow-Origin'` 响应中缺少 Access-Control-Allow-Origin，浏览器阻止了该跨源请求。
+- `net::ERR_FAILED 200 (OK)` 在这里表示服务器响应成功，但是浏览器拒绝了访问。
+
+> 什么是CORS跨域：CORS 是一种由浏览器实现的安全特性，旨在防止恶意网站通过脚本访问不属于它们域的资源。基本上，它允许服务器通过在响应中设置一些 HTTP 头，明确指示哪些域可以访问该资源。
+> 
+> [跨源资源共享（CORS） - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
+
+既然 XMLHttpRequest 不能实现跨域请求，那就只能用其他方式了。
+
 ### 用Ajax发送请求
 
-```javascript
-<div class="url-setting">
-  <input type="url" id="vueUrl" placeholder="格式如http://127.0.0.1:8080">
-  <button id="linkBtn">进入系统</button>
-</div>
-//jquery检查连接的url服务是否有效,适用所有浏览器
-const $ = require('jquery')
-$(document).ready(function () {
-  // 执行代码
-  function NetPing(pingUrl) {
-    $.ajax({
-      type: "GET",
-      cache: false,
-      url: pingUrl,
-      data: "",
-      success: function () {
-        alert("网址有效，开始加载。。");
-        ipcRenderer.send('asynchronous-message',pingUrl); //异步将渲染进程的数据传给主进程
-      },
-      error: function () {
-        alert("无效网址，请重新输入!");
-        $("#vueUrl").val("");
-      }
-    });
-  }
+> 什么是 Ajax：即**A**synchronous **J**avascript **A**nd **X**ML（异步JavaScript和XML）是一种在 Web 应用中通过异步发送 HTTP 请求向服务器获取内容，并使用这些新内容更新页面中相关的部分，而无需重新加载整个页面的 Web 开发技术。
+>
+> [AJAX - MDN Web 文档术语表：Web 相关术语的定义 | MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX)
 
-  //点击连接vue前端服务
-  $("#linkBtn").click(function(){
-    let urlVal = $("#vueUrl").val();
-    NetPing(urlVal);
-  })
+::: details **需要提前引入jQuery**
+
+```javascript:no-line-numbers
+// 引入jquery
+function loadjQuery(callback) {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js';
+  script.onload = () => {
+    console.log('jQuery loaded');
+    if (callback) {
+      callback();  // 当 jQuery 加载完成后调用回调函数
+    }
+  };
+  script.onerror = () => {
+    console.error('Failed to load jQuery');
+  };
+  document.head.appendChild(script);  // 将<script>标签添加到<head>中
+}
+
+// 使用加载的 jQuery
+loadjQuery(() => {
+  // 在这里可以使用 jQuery
+  $(document).ready(function () {
+    console.log("jQuery is ready to use!");
+  });
 });
 ```
+:::
+
+```javascript
+// 发送Ajax请求
+function statusURL(url) {
+  $.ajax({
+    url: url,
+    type: "GET",
+    cache: false,
+    data: "",
+    success: function () {
+      console.log("URL 可用");
+    },
+    error: function () {
+      console.log("URL 不可用");
+    }
+  });
+}
+
+statusURL("http://localhost:5500/");  // 本地LiveServer服务
+statusURL("https://www.baidu.com/");  // 未被墙网站
+statusURL("https://www.google.com/");  // 被墙网站
+```
+::: details 查看运行结果
+
+这里的运行结果和上面的 XMLHttpRequest 是一样的，只是用了 jQuery 封装了一下而已。不过因为加了 `cache: false,` , 所以每次请求后面都会跟上一个时间戳，避免缓存。
+
+![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/07.png)
+
+:::
+
+老的方案(实际中不推荐使用),这里做简单介绍(实际项目中如果要使用JSONP,一般会使用JQ等对JSONP进行了封装的类库来进行ajax请求)
 
 这两种方法都不错，但一看控制台，精准的报错，CORS跨域问题，然后看了看解决方法，基本上就是后端改cors或者使用jsonp，可我要的是纯前端跨域检测啊喂，你这让我改后端，然而我又改不了其他服务器的后端，那我写这个有什么用？？？
 
@@ -264,3 +290,4 @@ function checkTime(obj,tim){
 - [XMLHttpRequest - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
 - [跨源资源共享（CORS） - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
 - [elsewhere | 用Javascript检测跨域资源(CORS)的可用性](https://devylee.github.io/post/2017/04/cors-reachability-detect-in-javascript.html)
+- [AJAX - MDN Web 文档术语表：Web 相关术语的定义 | MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX)
