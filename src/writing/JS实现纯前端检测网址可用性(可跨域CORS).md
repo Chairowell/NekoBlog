@@ -227,6 +227,39 @@ Ajax 的方式似乎是行不通了，那我们再来看一下 Fetch API 是否�
 >
 > [Fetch API | 菜鸟教程](https://www.runoob.com/ajax/fetch-api.html)
 
+```javascript
+function statusURL(url) {
+  fetch(url, { 
+      method: 'HEAD',
+  })
+   .then(response => {
+      if (response.ok) {
+        console.log("URL 可用");
+      } else {
+        console.log("URL 不可用");
+      }
+    })
+   .catch(error => {
+      console.log("请求发生错误", error);
+    });
+}
+
+statusURL("http://localhost:5500/");  // 本地LiveServer服务
+statusURL("https://www.baidu.com/");  // 未被墙网站
+statusURL("https://www.google.com/");  // 被墙网站
+```
+::: details 查看运行结果
+![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/08.png)
+:::
+
+很遗憾的是 Fetch API 也遇到了跨域问题，原因是它默认不允许跨域请求。
+
+## 方案二：通过图片请求判断
+
+在CORS跨域问题的搜索上，我找到了另一种解决方案，就是通过图片请求判断。
+
+[JS实现探测网站链接的方法【测试可用】_javascript技巧_脚本之家](https://www.jb51.net/article/96765.htm)
+
 ```html
 <!DOCTYPE>
 <html>
@@ -272,7 +305,7 @@ HTML资源可以跨域引用，先请求一个压根不存在的文件，然后�
 
 ![img](https://i0.hdslb.com/bfs/article/1291769ab3f3a1bad52a9509152811240b9f8f35.png)最终流程
 
-```html
+```javascript
 <div id="test" onclick="pingURL(this,'https://www.chairo.cc')">Ping My Website</div>
 function pingURL(obj,url){
     var urlBox = document.getElementById(obj.id);
