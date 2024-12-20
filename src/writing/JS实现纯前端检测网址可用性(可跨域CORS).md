@@ -113,9 +113,9 @@ statusURL("https://www.google.com/");  // 被墙网站
 
 通过测试，可以看到在向同地址的服务器发请求时，返回了200响应码，则说明该地址可用。
 
-![CORS跨域错误](./JS实现纯前端检测网址可用性(可跨域CORS).assets/05.png)
-
 但是向其他地址的服务器发请求时，发现浏览器抛出了CORS跨域错误，并没能实现我们需要的效果。
+
+![CORS跨域错误](./JS实现纯前端检测网址可用性(可跨域CORS).assets/05.png)
 
 - `CORS policy: No 'Access-Control-Allow-Origin'` 响应中缺少 Access-Control-Allow-Origin，浏览器阻止了该跨源请求。
 - `net::ERR_FAILED 200 (OK)` 在这里表示服务器响应成功，但是浏览器拒绝了访问。
@@ -132,7 +132,7 @@ statusURL("https://www.google.com/");  // 被墙网站
 >
 > [AJAX - MDN Web 文档术语表：Web 相关术语的定义 | MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX)
 
-::: details **需要提前引入jQuery**
+::: details **需要提前引入jQuery，它封装了 XMLHttpRequest 对象的方法，使更容易使用 Ajax 技术**
 
 ```javascript:no-line-numbers
 // 引入jquery
@@ -184,19 +184,81 @@ statusURL("https://www.google.com/");  // 被墙网站
 ```
 ::: details 查看运行结果
 
-这里的运行结果和上面的 XMLHttpRequest 是一样的，只是用了 jQuery 封装了一下而已。不过因为加了 `cache: false,` , 所以每次请求后面都会跟上一个时间戳，避免缓存。
-
 ![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/07.png)
 
 :::
 
-老的方案(实际中不推荐使用),这里做简单介绍(实际项目中如果要使用JSONP,一般会使用JQ等对JSONP进行了封装的类库来进行ajax请求)
+很遗憾的是，这里的运行结果也遇到了跨域问题，因为只是将 XMLHttpRequest 用 jQuery 封装了而已。在配置中加了 `cache: false,` , 所以每次请求后面都会跟上一个时间戳，避免缓存。
 
-这两种方法都不错，但一看控制台，精准的报错，CORS跨域问题，然后看了看解决方法，基本上就是后端改cors或者使用jsonp，可我要的是纯前端跨域检测啊喂，你这让我改后端，然而我又改不了其他服务器的后端，那我写这个有什么用？？？
+经过一番收索，发现了一种 jQuery 的 Ajax 方法，在 **dataType** 是 `jsonp` 或者 `script` 的时候，似乎不会有跨域的问题。
 
-![img](https://i0.hdslb.com/bfs/article/fb8e540ff739dc827a74d2232d5c271d848a26d3.png@!web-article-pic.avif)CORS跨域问题
+**不过我没继续给出 jsonp 解决方案的原因是：**
+1. 服务器需要支持 jsonp 协议，需要配置服务器。
+   - 首先我无法对第三方服务器进行配置。
+   - 而且就算可以配置，为什么不直接设置 `("Access-Control-Allow-Origin", "*")`，这样更方便。
+   - [XmlHttpRequest使用及“跨域”问题解决 - 咸咸海风 - 博客园](https://www.cnblogs.com/651434092qq/p/11109199.html)
+2. jsonp 在我这种测试需求时会遇到的 **parsererror** 问题，即服务器返回的数据格式不正确。  
+   - 因为我去测试的网站他并不一定支持 jsonp，请求出来的大概率是 `HTML` 。
+   - [解决 $.ajax 请求返回 JSONP 格式时遇到的 parsererror 问题-百度开发者中心](https://developer.baidu.com/article/details/2871645)
+3. jsonp 的使用还有安全问题，比如 **XXS** 攻击。
 
-这里是脚本之家的解决方法（参考）
+> [!TIP]
+> 虽然 jsonp 无法直接提供我们想要的功能或解决跨域问题，但是它的实现思路，似乎可以给我们带来很大的启发。
+> 
+> 我在这篇文章中读到：
+> > JSONP之所以能够用来解决跨域方案，主要是因为 `<script>` 脚本拥有跨域能力，而JSONP正是利用这一点来实现。
+> > 
+> > [javascript - ajax跨域，这应该是最全的解决方案了 - 程序生涯 - SegmentFault 思否](https://segmentfault.com/a/1190000012469713)
+>
+> 我在想，是否还有像 `<script>` 一样的 HTML 标签可以实现跨域请求？我们后续会讲到，这也是解决我这个需求的关键。
+> 
+> ::: details 如果你有兴趣了解一下关于 jsonp 的知识，可以试试看这两篇文章
+> 
+> - [javascript - ajax跨域，这应该是最全的解决方案了 - 程序生涯 - SegmentFault 思否](https://segmentfault.com/a/1190000012469713)
+> - [JSONP 跨域原理及实现 - JavaScript进阶之路 - SegmentFault 思否](https://segmentfault.com/a/1190000041946934)
+>
+> :::
+
+Ajax 的方式似乎是行不通了，那我们再来看一下 Fetch API 是否可以解决跨域，并实现我的需求。
+
+### 用Fetch API发送请求
+
+> 什么是 Fetch API：Fetch API 是一种现代的、功能强大的网络请求工具，它允许你通过 JavaScript 异步地请求资源，而不需要使用传统的 XMLHttpRequest 对象。
+>
+> [Fetch API | 菜鸟教程](https://www.runoob.com/ajax/fetch-api.html)
+
+```javascript
+function statusURL(url) {
+  fetch(url, { 
+      method: 'HEAD',
+  })
+   .then(response => {
+      if (response.ok) {
+        console.log("URL 可用");
+      } else {
+        console.log("URL 不可用");
+      }
+    })
+   .catch(error => {
+      console.log("请求发生错误", error);
+    });
+}
+
+statusURL("http://localhost:5500/");  // 本地LiveServer服务
+statusURL("https://www.baidu.com/");  // 未被墙网站
+statusURL("https://www.google.com/");  // 被墙网站
+```
+::: details 查看运行结果
+![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/08.png)
+:::
+
+很遗憾的是 Fetch API 也遇到了跨域问题，原因是它默认不允许跨域请求。
+
+## 方案二：通过图片请求判断
+
+在CORS跨域问题的搜索上，我找到了另一种解决方案，就是通过图片请求判断。
+
+[JS实现探测网站链接的方法【测试可用】_javascript技巧_脚本之家](https://www.jb51.net/article/96765.htm)
 
 ```html
 <!DOCTYPE>
@@ -241,9 +303,9 @@ run()
 
 HTML资源可以跨域引用，先请求一个压根不存在的文件，然后利用onerror事件判断时间，不但可以检测可用性，还可以查看访问速度！啊，多是一件美事啊
 
-![img](https://i0.hdslb.com/bfs/article/1291769ab3f3a1bad52a9509152811240b9f8f35.png@1256w_1924h_!web-article-pic.avif)最终流程
+![img](https://i0.hdslb.com/bfs/article/1291769ab3f3a1bad52a9509152811240b9f8f35.png)最终流程
 
-```html
+```javascript
 <div id="test" onclick="pingURL(this,'https://www.chairo.cc')">Ping My Website</div>
 function pingURL(obj,url){
     var urlBox = document.getElementById(obj.id);
@@ -277,9 +339,9 @@ function checkTime(obj,tim){
 
 # **测试**
 
-![img](https://i0.hdslb.com/bfs/article/6a7a25c8e2dfd55bf170c64864f17159472b1c73.gif@1256w_250h_!web-article-pic.avif)01 - V2ray未开启
+![img](https://i0.hdslb.com/bfs/article/6a7a25c8e2dfd55bf170c64864f17159472b1c73.gif)01 - V2ray未开启
 
-![img](https://i0.hdslb.com/bfs/article/b7bc5a723beb78fc9ef866bb71b9050b8926d3ff.gif@1256w_250h_!web-article-pic.avif)
+![img](https://i0.hdslb.com/bfs/article/b7bc5a723beb78fc9ef866bb71b9050b8926d3ff.gif)
 02 - V2ray开启
 
 ## 相关文章
@@ -287,7 +349,24 @@ function checkTime(obj,tim){
 
 ## 参考
 
-- [XMLHttpRequest - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+CORS：
 - [跨源资源共享（CORS） - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
 - [elsewhere | 用Javascript检测跨域资源(CORS)的可用性](https://devylee.github.io/post/2017/04/cors-reachability-detect-in-javascript.html)
+- [浏览器同源政策及其规避方法 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+- [前端 - CORS解决跨域问题 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000022143487)
+
+XMLHttpRequest：
+- [XMLHttpRequest - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+- ["XMLHttpRequest" | Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/?search=XMLHttpRequest)
+
+AJAX：
 - [AJAX - MDN Web 文档术语表：Web 相关术语的定义 | MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/AJAX)
+- [XmlHttpRequest使用及“跨域”问题解决 - 咸咸海风 - 博客园](https://www.cnblogs.com/651434092qq/p/11109199.html)
+- [解决 $.ajax 请求返回 JSONP 格式时遇到的 parsererror 问题-百度开发者中心](https://developer.baidu.com/article/details/2871645)
+- [javascript - ajax跨域，这应该是最全的解决方案了 - 程序生涯 - SegmentFault 思否](https://segmentfault.com/a/1190000012469713)
+- [JSONP 跨域原理及实现 - JavaScript进阶之路 - SegmentFault 思否](https://segmentfault.com/a/1190000041946934)
+
+Fetch API：
+- [Fetch API | 菜鸟教程](https://www.runoob.com/ajax/fetch-api.html)
+- [使用 Fetch - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
+- [Fetch API 教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
