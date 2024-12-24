@@ -17,3 +17,6 @@ icon: circle-info
 热门曲大多都是听过的，再次红心是为了从沉底的歌单里捞起来，或者是莫名其妙的去红心了。
 
 我关注/回关是我能从你那收到喜欢听的，或口味相同的
+
+个人正在使用 **keybr.com** 进行打字练习，[My Profile](https://www.keybr.com/zh-hans/profile/63ci3fn) [keybr.com官网](https://www.keybr.com/) [Github地址](https://github.com/aradzie/keybr.com)
+
