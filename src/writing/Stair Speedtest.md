@@ -1,5 +1,6 @@
 ---
 title: Stair Speedtest 食用教程
+cover: assets/images/speedtest.jpg
 date: 2023-01-21 11:22:40
 categories:
   - 教程
