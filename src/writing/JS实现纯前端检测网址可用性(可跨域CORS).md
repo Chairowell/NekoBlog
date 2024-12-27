@@ -6,9 +6,8 @@ categories:
 tags:
   - Javascript
   - CORS
-star: 1
+star: 2
 isOriginal: true
-sticky: 1
 ---
 
 # JS实现纯前端检测网址可用性(可跨域CORS)
