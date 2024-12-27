@@ -49,18 +49,18 @@ export default hopeTheme({
     timeline: "摸鱼也挺快乐的说_(:зゝ∠)_",
     medias: {
       GitHub: "https://github.com/chairowell",
-      NeteaseCloudMusic: {
-        icon: "https://s1.music.126.net/style/favicon.ico",
-        link: "https://music.163.com/#/user/home?id=5079761200",
-      },
-      // "163Music": "https://music.163.com/#/user/home?id=5079761200",
+      // NeteaseCloudMusic: {
+      //   icon: "https://s1.music.126.net/style/favicon.ico",
+      //   link: "https://music.163.com/#/user/home?id=5079761200",
+      // },
+      "163Music": "https://music.163.com/#/user/home?id=5079761200",
       BiliBili: "https://space.bilibili.com/84378256",
       Twitter: "https://x.com/chairowell",
-      AFdian: {
-        icon: "https://static.afdiancdn.com/favicon.ico",
-        link: "https://ifdian.net/a/chairowell",
-      },
-      // "AFDian": "https://ifdian.net/a/chairowell",
+      // AFdian: {
+      //   icon: "https://static.afdiancdn.com/favicon.ico",
+      //   link: "https://afdian.com/a/chairowell",
+      // },
+      "AFDian": "https://afdian.com/a/chairowell",
   
       // Discord: "https://example.com",
       // Gmail: "mailto:chairowell@gmail.com",
