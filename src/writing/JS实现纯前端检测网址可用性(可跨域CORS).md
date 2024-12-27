@@ -1,6 +1,8 @@
 ---
 title: JS实现纯前端检测网址可用性(可跨域CORS)
-date: 2022-07-24
+date: 2022-07-23
+categories:
+  - 经验总结
 tags:
   - Javascript
   - CORS
@@ -258,8 +260,6 @@ statusURL("https://www.google.com/");  // 被墙网站
 
 在CORS跨域问题的搜索上，我找到了另一种解决方案，就是通过图片请求判断。
 
-[JS实现探测网站链接的方法【测试可用】_javascript技巧_脚本之家](https://www.jb51.net/article/96765.htm)
-
 ```html
 <!DOCTYPE>
 <html>
@@ -301,50 +301,63 @@ run()
 </html>
 ```
 
-HTML资源可以跨域引用，先请求一个压根不存在的文件，然后利用onerror事件判断时间，不但可以检测可用性，还可以查看访问速度！啊，多是一件美事啊
+> [JS实现探测网站链接的方法【测试可用】_javascript技巧_脚本之家](https://www.jb51.net/article/96765.htm)
 
-![img](https://i0.hdslb.com/bfs/article/1291769ab3f3a1bad52a9509152811240b9f8f35.png)最终流程
+他的实现思路是：先请求一个压根不存在的文件，然后利用服务器的错误响应，触发onerror事件，然后判断时间间隔。这不但可以检测可用性，还可以查看访问速度！啊，多是一件美事啊！
+
+![实现原理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/09.png)
+
+::: details 以前实现该功能的写法
+
+很早之前写的，现在有更好的实现方式。不过还是保留在这里，可以当参考用。
+
+```html:no-line-numbers
+<div id="test" onclick="pingURL(this,'https://www.chairo.cc')">Ping My Website</div>
+```
 
 ```javascript
-<div id="test" onclick="pingURL(this,'https://www.chairo.cc')">Ping My Website</div>
-function pingURL(obj,url){
+function pingURL(obj, url){
     var urlBox = document.getElementById(obj.id);
-    var urlDate = new Date();
-    var urlTime = urlDate.getMinutes()*60 + urlDate.getSeconds() + urlDate.getMilliseconds()/1000;
-    urlBox.innerHTML = "<img id='"+urlTime+"' src="+url+"/"+Math.random()+" width=0 height=0 onerror='checkTime(this,"+urlTime+")' >Testing...";
+    var startDate = new Date();
+    var startTime = startDate.getMinutes() * 60 + startDate.getSeconds() + startDate.getMilliseconds() / 1000;
+    urlBox.innerHTML = "<img id='"+startTime+"' src="+url+"/"+Math.random()+" width=0 height=0 onerror='checkTime(this,"+startTime+")'>Testing...";
 }
-function checkTime(obj,tim){
+function checkTime(obj, startTime){
     var nowDate = new Date();
-    var timec = (nowDate.getMinutes()*60 + nowDate.getSeconds() + nowDate.getMilliseconds()/1000 - tim).toFixed(2);
-    if(timec>20){
+    var times = (nowDate.getMinutes()*60 + nowDate.getSeconds() + nowDate.getMilliseconds()/1000 - startTime).toFixed(2);
+    if(times > 20){
        document.getElementById(obj.id).parentNode.innerHTML = "Ping Timeout"
      }else{
-       document.getElementById(obj.id).parentNode.innerHTML = timec;
+       document.getElementById(obj.id).parentNode.innerHTML = times;
      }
 }
 ```
 
-# 使用方法
+使用方法：
 
-将上方JS引入，新建一个div，里面必须包含id属性和pingURL(this,url)函数
+1. 将上方 javascript 代码引入，新建一个 `<div>` 标签，里面必须包含 `id` 属性和 `pingURL(this,url)` 函数
+2. url 部分放入链接（包含 `http://` 或 `https://` ）并用 `'单引号'` 包裹
+3. 点击该 `<div>` 标签，即可测试该链接是否可用
 
-其中this不用改动，url部分放入链接（包含http://或https://）并用‘单引号’包裹
-
-```html
+```html:no-line-numbers
 <div id="test1" onclick="pingURL(this,'https://www.chairo.cc')">Ping www.chairo.cc</div>
-<div id="test2" onclick="pingURL(this,'https://www.pixiv.ney')">Ping www.pixiv.net</div>
+<div id="test2" onclick="pingURL(this,'https://www.pixiv.net')">Ping www.pixiv.net</div>
 <div id="test3" onclick="pingURL(this,'https://www.baidu.com')">Ping www.baidu.com</div>
 <div id="test4" onclick="pingURL(this,'https://www.google.com')">Ping www.google.com</div>
 ```
 
-# **测试**
+运行结果：
 
-![img](https://i0.hdslb.com/bfs/article/6a7a25c8e2dfd55bf170c64864f17159472b1c73.gif)01 - V2ray未开启
+![关闭V2rayN代理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/10.gif)
 
-![img](https://i0.hdslb.com/bfs/article/b7bc5a723beb78fc9ef866bb71b9050b8926d3ff.gif)
-02 - V2ray开启
+![开启V2rayN代理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/11.gif)
+
+:::
+
+
 
 ## 相关文章
+
 暂无
 
 ## 参考
@@ -370,3 +383,17 @@ Fetch API：
 - [Fetch API | 菜鸟教程](https://www.runoob.com/ajax/fetch-api.html)
 - [使用 Fetch - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [Fetch API 教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
+- ["Fetch" | Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/?search=Fetch)
+
+Others：
+- [JS实现探测网站链接的方法【测试可用】_javascript技巧_脚本之家](https://www.jb51.net/article/96765.htm)
+
+## 说明
+
+本文原发表于[B站专栏](https://www.bilibili.com/read/cv17720781)，因为一些原因删除了，现在的文章是在原文基础上进行了更新和修正，并加入了一些新的内容。
+
+如果你想查看原始文章，请访问[这里](https://github.com/Chairowell/NekoBlog/blob/16f4f04d817b8773e2088e2e248bf793fbb060b1/src/writing/pingTest-by-js.md)。
+
+首次编写时间：2022-07-23
+
+首次发布时间：2022-07-24

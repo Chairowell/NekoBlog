@@ -5,8 +5,8 @@ date: 2024-12-10 15:00:00
 categories:
   - 教程
 tags:
-  - cloudflare
-  - vscode
+  - Cloudflare
+  - VS Code
   - 部署
 isOriginal: true
 ---

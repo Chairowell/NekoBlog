@@ -4,8 +4,8 @@ date: 2024-10-21 11:35:00
 categories: 
  - 项目
 tags: 
- - vuepress
- - plugin
+ - Vuepress
+ - Plugin
 ---
 # vuepress-plugin-encrypt
 一个 VuePress 插件，用于加密你在 VuePress 中的内容。
