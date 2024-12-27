@@ -1,26 +1,31 @@
+---
+title: ACG链接库 - ACG LinkHub
+categories:
+  - 资源分享
+tags:
+  - ACGMN
+star: 1
+isOriginal: true
+sticky: 1
+---
+
 # 📦ACG链接库 - ACG LinkHub
-
-## 🔼目录
-
-点击目录可快速转跳对应分类
-
-------
-
-<div id="directory"></div>
-
-------
-
-
 
 ## ⛔禁止：以任何形式在大流量公众平台上宣传本站以及主站！
 
+::: danger
+
 **禁止在B站、微信公众号文章、抖音、小红书、微博等一系列平台发布与我们相关的内容。**
 
-**请私下分享！你的帮助，能让本站存活时间更久！ヾ(≧▽≦*)o**
+**请私下分享！你的帮助，能让我们存活时间更久！ヾ(≧▽≦*)o**
 
-**注：若您的网站不经意间被收录到此站，且不希望被展示出来，请联系我们以去除您的网站，我们将会在48小时之内进行处理**
+:::
+![](https://www.clustrmaps.com/map_v2.png?d=e3dZrm4clq26TMG_t2CgUhlfOE_1TxHhdL54BuvqDws&cl=ffffff&w=0 =0x0)
+::: warning
 
+**若您的网站不经意间被收录，且不希望被展示出来，请联系我们以去除您的网站，我们将会在48小时之内进行处理**
 
+:::
 
 ## 📑食用说明：
 
@@ -44,13 +49,17 @@
 1. 知名度
 1. 其他……凭感觉？
 
-### **【已关闭】访问方式说明：**
-
-**！！！该方法目前不完善特别耗流量，已关闭！！！**
+### **访问方式说明：**
 
 - **直连** - 代表国内90%的地区可以正常访问
 
 - **魔法** - 则是需要一些特殊方法才可以访问的（有些地区不用，万恶的移动你屏蔽了多少网站），至于是什么方法我也不知道？笑
+
+::: warning
+
+**！！！以下功能不完善，特别耗流量，已关闭！！！**
+
+:::
 
 链接库打开过程中，会自动帮助你测试网页可用性，但由于种种技术限制，测试结果仅供参考，并不代表实际情况OK？比如说：**连接错误**不代表你实际不能访问，可能是检测用的代码抽风了，所以还请自行尝试~（如果你有能力解决请联系我）
 
@@ -61,8 +70,6 @@
 - <span style="color:red;font-size:26px;">■</span> **5~10s** 或 **连接错误** 
 
 点击测试结果可重新测试，因为网站链接实在是太多，高并发导致后面的链接测试延迟特别高，点击重新测试会恢复
-
-
 
 ## 🧱About ME：
 
@@ -84,72 +91,71 @@ by：是一只栗子啊
 
 ##  📮投稿说明：
 
-> 一个人收集实在是太累了，现在的搜索引擎也不给力，还是个信息茧房，有很多东西实在是没能力全面收集到，有机会说得好嘛“人多力量大”，如果你也有东西想分享给别人，不妨看看下面的内容。
+> 一个人收集实在是太累了，现在的搜索引擎有时也不给力。巨大的信息茧房，有很多东西实在是没能力全面收集到。有话说得好嘛：“人多力量大”，如果你也有东西想分享给别人，不妨看看下面的内容。
+
+### **链接**
+
+收集投稿方式（ 有处理优先级 ）：
+
+1. 本站 / 主站的留言板
+2. QQ群 / TG群组 直接@我
+3. ~~QQ频道的资源仓库贴~~
+4. ~~提交Github仓库的issue或PR（ 要求看仓库里 ）~~
+5. 通过邮箱联系我（ 邮件太多了经常会被埋住 ）
+
+> “就一个链接投稿我还要搞那么麻烦？懒得投了”
+
+因为有很多人嫌麻烦，这样的情况有很多，导致几乎收不到投稿 TwT 。所以如果想分享**链接**，最好的方法就是主站留言板里直接一个链接发进去就行，剩下的就只能交给我这个工具人来处理了（工作量+1）
+
+~~有新链接优先更新**链接库**，其次是**主站导航**（ 尽量一月一更 ）~~ 太忙了实在是 _(:зゝ∠)_
 
 ------
 
-### 链接
+### **友链**
 
-收集投稿方式（有处理优先级）：
-
-1. 主站的聊天
-2. QQ频道的资源仓库贴
-3. 提交Github仓库的issue或PR（要求看仓库里）
-4. 通过邮箱或TG联系我
-
-> “就一个链接投稿我还要搞那么多格式标准？懒得投了”
-
-因为有很多人嫌麻烦， 这样的情况有很多，导致几乎收不到投稿 TwT ，所以如果想分享**链接**，最好的方法就是主站聊天框里直接一个链接发进去就行，剩下的就只能交给我这个工具人来处理了（工作量+1）
-
-有新链接优先更新**链接库**，其次是**主站导航**（尽量一月一更）
-
-------
-
-### 友链
+::: warning
 
 **非常抱歉，只能申请和主站导航的友链，链接库不得申请友链！**
 
-请站长申请前将https://www.chairo.cc添加至你申请友链的网站
+:::
 
-名称：Chairo~(∠・ω< )⌒★
+请站长申请前将 `https://www.chairo.cc` 添加至你申请友链的网站
 
-介绍：一个收录各种各样奇怪资源的导航站(｡・`ω´･)
+名称：```Chairo~(∠・ω< )⌒★```
 
-网站网址：https://www.chairo.cc (不接受转跳链接 和 无域名IP地址链接，注：必须是https协议)
+介绍：```一个收录各种各样奇怪资源的导航站(｡・`ω´･)```
 
-图标：https://www.chairo.cc/favicon.png (格式支持ICO、PNG、JPG、GIF)
+网站网址：`https://www.chairo.cc` （ **不接受转跳链接** 和 **无域名IP地址链接**，注：**必须是https协议** ）
 
-联系方式：chairowell#gmail（QQ，邮箱，TG都可以）
+图标：`https://www.chairo.cc/favicon.png` （ 格式支持 ICO、PNG、JPG、GIF ）
+
+联系方式：`chairowell#gmail`（ QQ，邮箱，TG都可以 ）
 
 请按照以上格式把内容私发我，后续耐心等待即可(｡・`ω´･)
 
 ------
 
-### 壁纸
+### **壁纸**
 
-主站壁纸展示投稿，图片清晰度有要求，最好是原图或携带来源/链接
+主站壁纸展示投稿，图片清晰度有要求，最好是原图或来源链接
 
-投稿方式（有处理优先级）：
+投稿方式（ 有处理优先级 ）：
 
-1. QQ频道发帖（请带**#投稿**）
-1. Github仓库提交PR（要求看仓库里）
-1. 打包的图集.zip发我邮箱或TG
-
-**（禁止百度网盘链接）**
+1. QQ频道发帖（ 请带 **#投稿** ）
+1. ~~Github仓库提交PR（ 要求看仓库里 ）~~
+1. 打包的图集.zip发我邮箱或TG （ **禁止百度网盘链接** ）
 
 ------
 
-###　其他类型的东西
+### **其他类型的东西**
 
-仅限QQ频道，发帖即可
+QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
-
-
-## 🕒更新时间：2024-12-25
+## 🕒更新时间：2024-12-26
 
 ## 📈近期收录
 
-### 未分类 5
+### 未分类
 
 [ACG · 福利社-网罗各类单手游戏 (ybbacg.com) ](https://www.ybbacg.com/) 等待恢复
 
@@ -157,53 +163,11 @@ by：是一只栗子啊
 
 [ACG人物网-二次元人物角色资料图片百科 (acgrenwu.cn)](http://www.acgrenwu.cn/) 等待恢复
 
-[Find Iwara](https://www.iwara.info/) 异常
+[一库次元社 – 微爱次元社-次元动漫网-动漫资讯-绅士动漫-二三次元-风车动漫-ASMR-萌幻ACG-动漫|galgame|汉化GAL (i0c0i.com)](https://www.i0c0i.com/) 等待恢复
 
-[Welcome • HicceArs](https://www.hiccears.com/) 异常
+### 新收录
 
-### 新收录 93
 
-[宫代千纱 – 在下北泽度過無聊的每一天٩(●˙▿˙●)۶…⋆ฺ (gdqs.org)](https://gdqs.org/)
-
-[一库次元社 – 微爱次元社-次元动漫网-动漫资讯-绅士动漫-二三次元-风车动漫-ASMR-萌幻ACG-动漫|galgame|汉化GAL (i0c0i.com)](https://www.i0c0i.com/)
-
-[初音社 | 初音未来_MIKU_V家MMD视频_歌姬计划_壁纸_音乐资源分享 (mikuclub.win)](https://www.mikuclub.win/)
-
-[HotACG-看每日ACG热点新闻](https://www.hotacg.com/)
-
-[一番魂 – 应有尽有|同人|CG|Galgame|画集|MMD|二次元|三次元|3D|杂志|画师 (yifanhune.com)](https://yifanhune.com/)
-
-[WeGame - 一起更好玩 WeGame More](https://www.wegame.com.cn/home/)
-
-[育碧中国–育碧游戏–育碧官方网站 (ubisoft.com)](https://zh-cn.ubisoft.com/ubisoftconnect)
-
-[EA官方中文网](https://www.ea.com/zh-cn)
-
-[橙光·互动阅读新方式 | 66RPG](https://m.66rpg.com/)
-
-[机核 GCORES](https://www.gcores.com/)
-
-[二次元现场 – ACGLiveFan](https://www.acglivefan.com/)
-
-[DMM.com 20周年記念](https://special.dmm.com/)
-
-[アニメ！アニメ！ (animeanime.jp)](https://s.animeanime.jp/)
-
-[5sing音乐 (kugou.com)](https://5sing.kugou.com/index.html)
-
-[插画・漫画投稿＆SNS网页 - ART street by MediBang](https://medibang.com/)
-
-[哔哩哔哩相簿，绘你所想，拍你所爱 (bilibili.com)](https://h.bilibili.com/)
-
-[グッドスマイルカンパニー公式ショップ (goodsmile.com)](https://www.goodsmile.com/ja)
-
-[Hpoi手办维基](https://www.hpoi.net/)
-
-[一番赏俱乐部| BANDAI SPIRITS一番赏官方信息网站 (1kuji.com)](https://1kuji.com/)
-
-[みんなのくじ プライズのキャラクターグッズならキャラ広場 フリュー (charahiroba.com)](https://charahiroba.com/)
-
-[プライズ･くじ･グッズの総合情報サイト【セガプラザ】 (segaplaza.jp)](https://segaplaza.jp/)
 
 [株式会社タイトー (taito.co.jp)](https://www.taito.co.jp/)
 
@@ -621,9 +585,15 @@ by：是一只栗子啊
 
 [LOFTER（乐乎） - 让兴趣，更有趣](https://www.lofter.com/front/login)
 
+[插画・漫画投稿＆SNS网页 - ART street by MediBang](https://medibang.com/)
+
 [POTOFU](https://potofu.me/)
 
+[Welcome • HicceArs](https://www.hiccears.com/)
+
 [Anime pictures and wallpapers (anime-pictures.net)](https://anime-pictures.net/)
+
+[一番魂 – 应有尽有|同人|CG|Galgame|画集|MMD|二次元|三次元|3D|杂志|画师 (yifanhune.com)](https://yifanhune.com/)
 
 [Wallpaper Abyss - HD Wallpapers, Background Images (alphacoders.com)](https://wall.alphacoders.com/)
 
@@ -787,6 +757,8 @@ PT 种子相关（只记录不更新，偏小众）
 
 [小说 - 百合会 (yamibo.com)](https://www.yamibo.com/site/novel)
 
+[橙光·互动阅读新方式 | 66RPG](https://m.66rpg.com/)
+
 ###  🔞
 
 #### 直连
@@ -922,9 +894,19 @@ PT 种子相关（只记录不更新，偏小众）
 
 [UPUPUO – 这是一种态度ノ๑ó﹏ò๑つ~ロ](https://www.upupuo.com/)
 
+[机核 GCORES](https://www.gcores.com/)
+
 [《　梦》 (blue-archive.io)](https://games.blue-archive.io/koharu-dream/)
 
 [Life Restart (syaro.io)](https://liferestart.syaro.io/public/)
+
+[宫代千纱 – 在下北泽度過無聊的每一天٩(●˙▿˙●)۶…⋆ฺ (gdqs.org)](https://gdqs.org/)
+
+[WeGame - 一起更好玩 WeGame More](https://www.wegame.com.cn/home/)
+
+[育碧中国–育碧游戏–育碧官方网站 (ubisoft.com)](https://zh-cn.ubisoft.com/ubisoftconnect)
+
+[官方中文网EA](https://www.ea.com/zh-cn)
 
 [FlappyPaimon - 免费试玩 | 唤境:人人都能做游戏 (evkworld.net)](https://www.evkworld.net/g/yqi7na)
 
@@ -1003,6 +985,8 @@ PT 种子相关（只记录不更新，偏小众）
 [Last.fm | Play music, find songs, and discover artists](https://www.last.fm/)
 
 [Mikutap (aidn.jp)](https://aidn.jp/mikutap/)
+
+[5sing音乐 (kugou.com)](https://5sing.kugou.com/index.html)
 
 ### 魔法
 
@@ -1111,9 +1095,13 @@ PT 种子相关（只记录不更新，偏小众）
 
 [YuC's AnimeList](https://yuc.wiki/)
 
-[动漫新番表 byHazx. 2023年10月新番表 | 2023年7月新番表 | Hazx新番表 | 追番表 | H萌 (hmacg.cn)](https://xf.hmacg.cn/)
+[动漫新番表 byHazx. Hazx新番表 | 追番表 | H萌 (hmacg.cn)](https://xf.hmacg.cn/)
 
 [Anime News Network](https://www.animenewsnetwork.com/)
+
+[二次元现场 – ACGLiveFan](https://www.acglivefan.com/)
+
+[HotACG-看每日ACG热点新闻](https://www.hotacg.com/)
 
 [煎蛋 - 地球上没有新鲜事 (jandan.net)](https://jandan.net/)[煎蛋 - 地球上没有新鲜事 (jandan.net)](https://jandan.net/)
 
@@ -1157,6 +1145,8 @@ PT 种子相关（只记录不更新，偏小众）
 
 [专业模型创作分享社区_模之屋_PlayBox (aplaybox.com)](https://www.aplaybox.com/)
 
+[Hpoi手办维基](https://www.hpoi.net/)
+
 
 
 ## 🛒购物 & 商业活动
@@ -1172,6 +1162,8 @@ PT 种子相关（只记录不更新，偏小众）
 [CDJapan : Japanese Anime, Jpop, Japanese music, Game music, Japanese movie, CD, DVD](https://www.cdjapan.co.jp/)
 
 [マサドラ (masadora.jp)](https://www.masadora.jp/)
+
+[グッドスマイルカンパニー公式ショップ (goodsmile.com)](https://www.goodsmile.com/ja)
 
 [米画师美术外包交易平台 - 带给你自由、高效、专业的美术工作体验 (mihuashi.com)](https://www.mihuashi.com/)
 
@@ -1189,9 +1181,13 @@ PT 种子相关（只记录不更新，偏小众）
 
 [とらのあな通販 超お得祭！ (toranoana.shop)](https://lp.toranoana.shop/fair/super/)
 
+[一番赏俱乐部| BANDAI SPIRITS一番赏官方信息网站 (1kuji.com)](https://1kuji.com/)
+
+[プライズ･くじ･グッズの総合情報サイト【セガプラザ】 (segaplaza.jp)](https://segaplaza.jp/)
+
 ### 魔法
 
-[メルカリ - 日本最大のフリマサービス (mercari.com)](https://jp.mercari.com/)
+[DMM.com - DMM TV・ゲーム・動画・電子書籍・英会話・FX等の総合サイト](https://www.dmm.com/)[メルカリ - 日本最大のフリマサービス (mercari.com)](https://jp.mercari.com/)
 
 [::: 广州天闻角川 GZTWKADOKAWA ::: | 轻小说 | 漫画 | 书籍 | 杂志 | 精品 | 数字内容](http://www.gztwkadokawa.com/)
 
