@@ -58,9 +58,9 @@ export default hopeTheme({
       Twitter: "https://x.com/chairowell",
       // AFdian: {
       //   icon: "https://static.afdiancdn.com/favicon.ico",
-      //   link: "https://ifdian.net/a/chairowell",
+      //   link: "https://afdian.com/a/chairowell",
       // },
-      "AFDian": "https://ifdian.net/a/chairowell",
+      "AFDian": "https://afdian.com/a/chairowell",
   
       // Discord: "https://example.com",
       // Gmail: "mailto:chairowell@gmail.com",
