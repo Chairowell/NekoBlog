@@ -7,6 +7,10 @@ tags:
 star: 1
 isOriginal: true
 sticky: 1
+navbar: false
+sidebar: false
+pageInfo: false
+breadcrumb: false
 ---
 
 # 📦ACG链接库 - ACG LinkHub
@@ -20,12 +24,14 @@ sticky: 1
 **请私下分享！你的帮助，能让我们存活时间更久！ヾ(≧▽≦*)o**
 
 :::
-![](https://www.clustrmaps.com/map_v2.png?d=e3dZrm4clq26TMG_t2CgUhlfOE_1TxHhdL54BuvqDws&cl=ffffff&w=0 =0x0)
+
 ::: warning
 
 **若您的网站不经意间被收录，且不希望被展示出来，请联系我们以去除您的网站，我们将会在48小时之内进行处理**
 
 :::
+![](https://www.clustrmaps.com/map_v2.png?d=e3dZrm4clq26TMG_t2CgUhlfOE_1TxHhdL54BuvqDws&cl=ffffff&w=0 =0x0)
+![](https://sstatic1.histats.com/0.gif?4814393&101 =0x0)
 
 ## 📑食用说明：
 
@@ -167,7 +173,9 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
 ### 新收录
 
+[Hikarinagi - 一个ACGN文化社区](https://www.hikarinagi.com/)
 
+[NekoGAL- Galgame传递者](https://www.nekogal.com/)
 
 [株式会社タイトー (taito.co.jp)](https://www.taito.co.jp/)
 
@@ -355,12 +363,9 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
 [GGS](https://gal.saop.cc/)
 
-[Predidit/Kazumi: 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕。](https://github.com/Predidit/Kazumi)
+
 
 [樱之空导航 - 樱花之空中舞二夜❀ | ACG二次元资源网站・ALL.cc](https://www.allcc.cc/)
-
-[琉璃社 - 最新的ACG资讯 分享同人动漫的快乐](https://liulishe.ooo/)
-
 
 
 ## 🎬动漫番剧
@@ -520,6 +525,10 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 ### 直连
 
 [Flow - 在线 EPUB 阅读器 (flowoss.com)](https://www.flowoss.com/zh-CN)
+
+[Predidit/Kazumi: 基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕。](https://github.com/Predidit/Kazumi)
+
+[Miru](https://miru.js.org/)
 
 [地图 - 动画巡礼 (anitabi.cn)](https://anitabi.cn/map)
 
@@ -774,8 +783,6 @@ PT 种子相关（只记录不更新，偏小众）
 [Home | Mihon (mihonapp.netlify.app)](https://mihonapp.netlify.app/)
 
 - [Home | Tachiyomi](https://tachiyomi.org/)已停止开发，由mihon接手
-
-[Miru](https://miru.js.org/)
 
 [ツイマンガ - Twitterで話題の漫画を毎日更新 (twiman.net)](https://twiman.net/)
 
@@ -1047,6 +1054,8 @@ PT 种子相关（只记录不更新，偏小众）
 [琉璃神社★分享动漫快乐 (hacg.dad)](https://hacg.dad/) 
 
 - 备用（[琉璃神社★分享动漫快乐 (hacg.zip)](https://www.hacg.zip/)）
+
+
 
 [好萌次元(好萌动漫)NiceMoe – 欢迎大家常来搜集整理各类漫画,音乐,萌图,动漫,里番,3D里番,本子等二次元资源。](https://nicemoe.us/)
 
