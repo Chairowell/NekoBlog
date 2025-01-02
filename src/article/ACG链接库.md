@@ -79,13 +79,13 @@ breadcrumb: false
 
 ## 🧱About ME：
 
-主导航站：https://www.chairo.cc
+主导航站：`https://www.chairo.cc/`
 
-QQ频道：https://pd.qq.com/s/频道链接（频道链接改成daoner5ti，防爬虫）
+QQ频道：`https://pd.qq.com/s/频道链接`（频道链接改成 `daoner5ti`，防爬虫）
 
-邮箱：chairowell#gmail （#改成@，防爬虫）
+邮箱：`chairowell#gmail` （`#` 改成`@`，防爬虫）
 
-TG：https://t.me/群链接（群链接改成+TFgAvOsCuagxMTA1，防爬虫）
+TG：`https://t.me/群链接`（群链接改成 `+TFgAvOsCuagxMTA1`，防爬虫）
 
 ！！！不接任何广告！！！
 
@@ -161,51 +161,11 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
 ## 📈近期收录
 
-### 未分类
+### **未分类**
 
-[ACG · 福利社-网罗各类单手游戏 (ybbacg.com) ](https://www.ybbacg.com/) 等待恢复
 
-[GalX Fans (galxfans.top)](https://maintain.galxfans.top/) 等待恢复
 
-[ACG人物网-二次元人物角色资料图片百科 (acgrenwu.cn)](http://www.acgrenwu.cn/) 等待恢复
-
-[一库次元社 – 微爱次元社-次元动漫网-动漫资讯-绅士动漫-二三次元-风车动漫-ASMR-萌幻ACG-动漫|galgame|汉化GAL (i0c0i.com)](https://www.i0c0i.com/) 等待恢复
-
-### 新收录
-
-[Hikarinagi - 一个ACGN文化社区](https://www.hikarinagi.com/)
-
-[NekoGAL- Galgame传递者](https://www.nekogal.com/)
-
-[株式会社タイトー (taito.co.jp)](https://www.taito.co.jp/)
-
-[SOSG动漫网-新番ACG小说同人萌化个人小卡通](http://www.sosg.net/)
-
-[御宅同萌 - 一个二次元绅士聚集地 - (yztm.org)](https://yztm.org/)
-
-[動漫國字幕組 (dmguo.org)](https://dmguo.org/)
-
-[DHR-動畫研究字幕組](https://dhr.moe/forum.php)
-
-[動音漫影 - Dymy | Anime | Music | Comic | Drama](https://bbs.dymy.org/forum.php)
-
-[紫音動漫組 (pusacgn.org)](https://www.pusacgn.org/)
-
-[千夏町 - 千夏字幕组官方论坛 - Powered by Discuz! (airota.net)](https://www.airota.net/bbs/)、
-
-[欢迎来到WorldCosplay - WorldCosplay](https://worldcosplay.net/)
-
-[Cosplay中国-次元岛-Cosplay中国|次元岛-Cosplay商演|Cosplay商业演出|Cosplay图片|Cosplay服装|Cosplay福利|Cos美图|次元岛社区平台 ](cosplay8.com)
-
-[[和邪社 - 二次元观察 ACG生活 (hexieshe.com)](https://www.hexieshe.com/)](https://www.cosplay8.com/index.html)
-
-[钚同社 (butongshe.com)](https://www.butongshe.com/)
-
-[橙心社 | 诚心制作每一期节目 (cxacg.com)](https://www.cxacg.com/)
-
-[梦域动漫网_为你呈现不一样的ACG情报 (moejam.com)](https://www.moejam.com/)
-
-[MAG.MOE - THE MAG, THE MOE.](https://mag.moe/)
+### **新收录**
 
 [ようこそ、紳士会所へ！ (sshs.pw)](https://www.sshs.pw/)
 
@@ -361,7 +321,17 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
 [妹妹ACG-一个属于妹妹的网站](https://loliacg.top/)
 
-[GGS](https://gal.saop.cc/)
+[稻荷 • Galgame资源网站](https://www.amoebi.com/)
+
+[主页 | 梓澪の妙妙屋](https://zi0.cc/)
+
+[失落小站 - galgame资源站](https://www.shinnku.com/)
+
+[量子ACG](https://lzacg.org/)
+
+[主页 | 猫猫网盘](https://pan.catcat.blog/)
+
+[莉斯坦ACG](https://www.limulu.fun/)
 
 
 
@@ -699,10 +669,12 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 PT 种子相关（只记录不更新，偏小众）
 
 - [动漫花园PT站 :: U2 (dmhy.org)](https://u2.dmhy.org/portal.php)
-
 - [JpopPT站 :: JPopsuki 2.0](https://jpopsuki.eu/login.php)
-
 - [ACGTracker是一个ACG领域的开放式Tracker](http://acgtracker.com/)
+
+[DHR-動畫研究字幕組](https://dhr.moe/forum.php)
+
+[千夏町 - 千夏字幕组官方论坛 - Powered by Discuz! (airota.net)](https://www.airota.net/bbs/)
 
 ### 魔法
 
@@ -737,6 +709,8 @@ PT 种子相关（只记录不更新，偏小众）
 [动漫下载|BT下载|动画|漫画 - 旋风字幕组(旋风动漫) - Powered by XFSUB.ORG](https://bbs.xfsub.org/)
 
 [源仓库 (yckceo.com)](https://www.yckceo.com/)
+
+[動漫國字幕組 (dmguo.org)](https://dmguo.org/)
 
 
 
@@ -863,7 +837,11 @@ PT 种子相关（只记录不更新，偏小众）
 
 [我的Galgame资源发布站 - 初音的青葱 (yngal.com)](https://yngal.com/)
 
+[GGS](https://gal.saop.cc/)
+
 [绮梦 - 专注分享次元世界 (acgs.one)](https://acgs.one/)
+
+[NekoGAL- Galgame传递者](https://www.nekogal.com/)
 
 [绘谜 - enazo - 绘谜画猜 - 你画我猜 - 神奇海螺试验场](https://enazo.cn/)
 
@@ -1055,7 +1033,13 @@ PT 种子相关（只记录不更新，偏小众）
 
 - 备用（[琉璃神社★分享动漫快乐 (hacg.zip)](https://www.hacg.zip/)）
 
+[琉璃社 - 最新的ACG资讯 分享同人动漫的快乐](https://liulishe.ooo/)
 
+[Hikarinagi - 一个ACGN文化社区](https://www.hikarinagi.com/)
+
+[御宅同萌 - 一个二次元绅士聚集地 - (yztm.org)](https://yztm.org/)
+
+[紫音動漫組 (pusacgn.org)](https://www.pusacgn.org/)
 
 [好萌次元(好萌动漫)NiceMoe – 欢迎大家常来搜集整理各类漫画,音乐,萌图,动漫,里番,3D里番,本子等二次元资源。](https://nicemoe.us/)
 
@@ -1112,9 +1096,15 @@ PT 种子相关（只记录不更新，偏小众）
 
 [HotACG-看每日ACG热点新闻](https://www.hotacg.com/)
 
+[橙心社 | 诚心制作每一期节目 (cxacg.com)](https://www.cxacg.com/)
+
+[梦域动漫网_为你呈现不一样的ACG情报 (moejam.com)](https://www.moejam.com/)
+
 [煎蛋 - 地球上没有新鲜事 (jandan.net)](https://jandan.net/)[煎蛋 - 地球上没有新鲜事 (jandan.net)](https://jandan.net/)
 
 [ACG17 - 宅就宅一起](https://acg17.com/)
+
+[[和邪社 - 二次元观察 ACG生活 (hexieshe.com)](https://www.hexieshe.com/)](https://www.cosplay8.com/index.html)
 
 [Z站_ACG动漫_二次元妹子图_COSPLAY_二次元新闻_动漫资讯_宅萌社 (zhaimoe.com)](https://www.zhaimoe.com/)
 
@@ -1196,6 +1186,8 @@ PT 种子相关（只记录不更新，偏小众）
 
 ### 魔法
 
+[株式会社タイトー (taito.co.jp)](https://www.taito.co.jp/)
+
 [DMM.com - DMM TV・ゲーム・動画・電子書籍・英会話・FX等の総合サイト](https://www.dmm.com/)[メルカリ - 日本最大のフリマサービス (mercari.com)](https://jp.mercari.com/)
 
 [::: 广州天闻角川 GZTWKADOKAWA ::: | 轻小说 | 漫画 | 书籍 | 杂志 | 精品 | 数字内容](http://www.gztwkadokawa.com/)
@@ -1249,3 +1241,25 @@ PT 种子相关（只记录不更新，偏小众）
 [AI判官 (yyhutil.com)](https://judge.yyhutil.com/)
 
 [診断メーカー | おもしろ診断投稿サイト (shindanmaker.com)](https://shindanmaker.com/)
+
+
+
+## 🌐失效
+
+[ACG · 福利社-网罗各类单手游戏 (ybbacg.com) ](https://www.ybbacg.com/) 等待恢复
+
+[GalX Fans (galxfans.top)](https://maintain.galxfans.top/) 等待恢复
+
+[ACG人物网-二次元人物角色资料图片百科 (acgrenwu.cn)](http://www.acgrenwu.cn/) 等待恢复
+
+[一库次元社 – 微爱次元社-次元动漫网-动漫资讯-绅士动漫-二三次元-风车动漫-ASMR-萌幻ACG-动漫|galgame|汉化GAL (i0c0i.com)](https://www.i0c0i.com/) 等待恢复
+
+[SOSG动动漫网-新番ACG小说同人萌化个人小卡通](http://www..net/) 失效
+
+[動音漫影 - Dymy | Anime | Music | Comic | Drama](https://bbs.dymy.org/forum.php) 异常
+
+[欢迎来到WorldCosplay - WorldCosplay](https://worldcosplay.net/)
+
+[Cosplay中国-次元岛-Cosplay中国|次元岛-Cosplay商演|Cosplay商业演出|Cosplay图片|Cosplay服装|Cosplay福利|Cos美图|次元岛社区平台 ](htts://cosplay8.com)
+
+[MAG.MOE - THE MAG, THE MOE.](https://mag.moe/)
