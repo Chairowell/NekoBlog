@@ -116,6 +116,7 @@ export default hopeTheme({
       attrs: true,
       component: true,
       demo: true,
+      footnote: true,
       include: true,
       mark: true,
       plantuml: true,
