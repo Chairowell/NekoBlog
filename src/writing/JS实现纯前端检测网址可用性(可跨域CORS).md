@@ -7,24 +7,23 @@ tags:
   - Javascript
   - CORS
 star: 2
-isOriginal: true
 ---
 
 # JS实现纯前端检测网址可用性(可跨域CORS)
 
-前段时间在完善自己的导航网页，因为里面有很多资源是临时或国外的，而且不会主动检测已有链接的可用性 ~~（因为懒）~~ ，所以想写个JS用来帮助我检测，以便发现和及时更新。
+前段时间在完善自己的导航网页，因为里面有很多资源是临时或国外的，而且不会主动去检测已有链接的可用性 ~~（因为懒）~~ ，所以想写个JS用来帮助我检测，以便发现失效并及时更新。
 
 但，是写前端还是后端呢？上网搜了搜类似案例，大多都是后端的，而且有详细的讲解。好！那就写后端吧，简单 ~~（有的抄）~~ ，就嘎嘎地写了一下，检测，更新资源，上线部署。
 
-不久后有朋友跟我说：“还是有很多(墙外)资源打不开啊。” 
+不久后有用户跟我说：“还是有很多(墙外)资源打不开啊。” 
 
-我：“......不是（无语到了）”
+我：“......不是（哭笑 ”
 
 每个人的网络环境都各不相同，有些资源上不去也是正常，但如何让他们明白，这可能是因为他们的网络环境问题呢？
 
 我就在想，能否在前端尝试Ping或类似的测试呢？
 
-## 方案一：通过响应码判断
+## 方案一：通过响应码判断 ×
 
 前端发送网络请求，最快想到的就是 `XMLHttpRequest` 、`Ajax` 、`Fetch API` 这三兄弟了。通过发起网络请求，获取响应码，然后根据响应码判断是否可用。
 
@@ -253,9 +252,9 @@ statusURL("https://www.google.com/");  // 被墙网站
 ![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/08.png)
 :::
 
-很遗憾的是 Fetch API 也遇到了跨域问题，原因是它默认不允许跨域请求。
+很遗憾的是 Fetch API 也遇到了跨域问题，原因依旧是浏览器默认不允许跨域请求。
 
-## 方案二：通过图片请求判断
+## 方案二：通过图片请求判断 √
 
 在CORS跨域问题的搜索上，我找到了另一种解决方案，就是通过图片请求判断。
 
@@ -302,11 +301,15 @@ run()
 
 > [JS实现探测网站链接的方法【测试可用】_javascript技巧_脚本之家](https://www.jb51.net/article/96765.htm)
 
-他的实现思路是：先请求一个压根不存在的文件，然后利用服务器的错误响应，触发onerror事件，然后判断时间间隔。这不但可以检测可用性，还可以查看访问速度！啊，多是一件美事啊！
+**作者 yczz** 的实现思路是：通过向服务器请求一个不存在的图片文件，然后利用服务器的错误响应，触发onerror事件，然后利用时间间隔判断是否可用。
+
+下面我制作了一张流程图，来展示他的实现原理：
 
 ![实现原理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/09.png)
 
-::: details 以前实现该功能的写法
+这个方法实在是太精妙了，不但可以检测可用性，还可以粗略的查看访问速度。啊，多是一件美事啊！
+
+::: details 自己以前实现该功能的写法
 
 很早之前写的，现在有更好的实现方式。不过还是保留在这里，可以当参考用。
 
@@ -315,20 +318,20 @@ run()
 ```
 
 ```javascript
-function pingURL(obj, url){
-    var urlBox = document.getElementById(obj.id);
-    var startDate = new Date();
-    var startTime = startDate.getMinutes() * 60 + startDate.getSeconds() + startDate.getMilliseconds() / 1000;
-    urlBox.innerHTML = "<img id='"+startTime+"' src="+url+"/"+Math.random()+" width=0 height=0 onerror='checkTime(this,"+startTime+")'>Testing...";
+function pingURL(obj, url) {
+  var urlBox = document.getElementById(obj.id);
+  var startDate = new Date();
+  var startTime = startDate.getMinutes() * 60 + startDate.getSeconds() + startDate.getMilliseconds() / 1000;
+  urlBox.innerHTML = `<img id="${startTime}" src="${url+'/'+Math.random()}" width=0 height=0 onerror="checkTime(this,${startTime})">Testing...`;
 }
-function checkTime(obj, startTime){
-    var nowDate = new Date();
-    var times = (nowDate.getMinutes()*60 + nowDate.getSeconds() + nowDate.getMilliseconds()/1000 - startTime).toFixed(2);
-    if(times > 20){
-       document.getElementById(obj.id).parentNode.innerHTML = "Ping Timeout"
-     }else{
-       document.getElementById(obj.id).parentNode.innerHTML = times;
-     }
+function checkTime(obj, startTime) {
+  var nowDate = new Date();
+  var times = (nowDate.getMinutes()*60 + nowDate.getSeconds() + nowDate.getMilliseconds()/1000 - startTime).toFixed(2);
+  if (times > 20) {
+    document.getElementById(obj.id).parentNode.innerHTML = "Timeout"
+  } else {
+    document.getElementById(obj.id).parentNode.innerHTML = times;
+  }
 }
 ```
 
@@ -353,11 +356,7 @@ function checkTime(obj, startTime){
 
 :::
 
-
-
-## 相关文章
-
-暂无
+同样是向不同域名的服务器发送请求，为什么 `<img>` 标签可以实现跨域请求，而 XMLHttpRequest 却不行？
 
 ## 参考
 
