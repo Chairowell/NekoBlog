@@ -1,9 +1,14 @@
 ---
 title: ACG链接库 - ACG LinkHub
 categories:
+  - ACGMN
   - 资源分享
 tags:
-  - ACGMN
+  - Anime
+  - Comic
+  - Games
+  - Music
+  - Novel
 star: 1
 isOriginal: true
 sticky: 1
