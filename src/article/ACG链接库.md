@@ -162,7 +162,7 @@ by：是一只栗子啊
 
 QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
-## 🕒更新时间：2024-12-26
+## 🕒更新时间：2025-01-12
 
 ## 📈近期收录
 
@@ -338,7 +338,15 @@ QQ频道 \ QQ群 \ TG群组 ，发帖即可
 
 [莉斯坦ACG](https://www.limulu.fun/)
 
+[最近更新 | Komiic漫畫](https://komiic.com/)
 
+[MX动漫-专注在线动漫的樱花动漫备用网站](https://www.mxdm9.cc/)
+
+[樱花动漫_专注动漫的网站_在线观看全集动漫](https://www.857fans.com/)
+
+[电影先生 - 聚合全网高清影视在线观看、下载](https://www.dianyingim.com/)
+
+[APP影院-全网最全视频库](https://www.appmovie.art/)
 
 [樱之空导航 - 樱花之空中舞二夜❀ | ACG二次元资源网站・ALL.cc](https://www.allcc.cc/)
 
@@ -773,7 +781,7 @@ PT 种子相关（只记录不更新，偏小众）
 
 [漫画 在线漫画 原创漫画 漫画大全-动漫之家- 首页 - 动漫之家 (idmzj.com)](https://www.idmzj.com/)
 
-[Kox.moe Kindle漫畫|Kobo漫畫|epub漫畫 ](http://kox.moe/)
+[Kox.moe Kindle漫畫|Kobo漫畫|epub漫畫 ](https://kox.moe/)
 
 [漫自由mhx12_epub漫畫Kindle漫畫下载](https://mhx12.com/)
 
@@ -792,6 +800,8 @@ PT 种子相关（只记录不更新，偏小众）
 [国漫大全_大角虫漫画_校花的贴身高手漫画_星辰变漫画_完美世界漫画 - 国漫吧 (guoman8.cc)](http://www.guoman8.cc/)
 
 [滴答漫画- 免费漫画_漫画大全_在线漫画_好看的漫画网站 (didamh.com)](https://www.didamh.com/)
+
+- [滴答漫画- 免费漫画_漫画大全_在线漫画_好看的漫画网站](https://www.jinyir18.com/)
 
 [斗罗大陆 绝世唐门 斗破苍穹 星武神诀 百炼成神 COLAMANGA](https://www.colamanga.com/)
 
