@@ -1,11 +1,12 @@
 ---
 title: Markdown 语法完全指南
+cover: assets/images/markdown.jpg
+date: 2025-01-13 00:00:00
 categories:
   - 教程
 tags:
   - Markdown
   - 语法
-timeline: false
 ---
 
 # Markdown 语法完全指南
@@ -41,7 +42,7 @@ OK，废话太多了，Let's Go *!*
 
 ## 基本语法
 
-### **1. 标题语法**
+### **1. 标题**
 
 如果要创建一个标题，那么我们需要在标题文字前面加上 `#`（井号）。
 
@@ -92,9 +93,17 @@ OK，废话太多了，Let's Go *!*
 >
 
 [>> 标题拓展知识 - 点击查看 <<](#标题)
+
+
+
 ## 拓展
 
-### 标题
+### 1. 标题
+
+**快捷键（部分编辑器支持）：**
+
+- `<Ctrl> + [1-6]` ：按下 Ctrl 键和对应数字，光标所在那一行会变为对应级别的标题格式。
+- `<Ctrl> + 0` ：按下该组合快捷键，光标所在那一行会清除标题格式。
 
 **标题的另一种写法是：**
 
@@ -118,9 +127,35 @@ OK，废话太多了，Let's Go *!*
 ```
 
 
-**快捷键（部分编辑器支持）：**
-- `<Ctrl> + [1-6]` ：按下 Ctrl 键和对应数字，光标所在那一行会变为对应级别的标题格式。
-- `<Ctrl> + 0` ：按下该组合快捷键，光标所在那一行会清除标题格式。
+<table>
+  <tr>
+    <th>Markdown语法</th>
+    <th>HTML</th>
+    <th>效果预览</th>
+  </tr>
+  <tr>
+    <td>
+<pre>
+一级标题
+===
+</pre>
+    </td>
+    <td><pre><code class="language-html">&lth1&gt一级标题&lt/h1&gt</code></pre></td>
+    <td><h1>一级标题</h1></td>
+  </tr>
+  <tr>
+    <td>
+<pre>
+二级标题
+---
+</pre>
+    </td>
+    <td><pre><code class="language-html">&lth2&gt二级标题&lt/h2&gt</code></pre></td>
+    <td><h2>二级标题</h2></td>
+  </tr>
+</table>
+
+
 
 ## Markdown 文件
 
@@ -129,4 +164,5 @@ Markdown 文件通常以 `.md` 文件后缀结尾，也少有以 `.markdown` 后
 ## 引用：
 
 - [CommonMark](https://commonmark.org/)
+- [CommonMark规范](https://spec.commonmark.org/)
 - [Markdown 教程](https://markdown.com.cn/)
