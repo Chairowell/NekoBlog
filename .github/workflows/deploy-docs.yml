@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - writing
+      - dev
 
 permissions:
   contents: write
@@ -16,28 +18,32 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
 
-      - name: 清理 Corepack 缓存
-        run: rm -rf ~/.cache/node/corepack
+      - name: 深度清理Corepack
+        run: |
+          # 清理所有已知缓存路径
+          sudo rm -rf ~/.cache/node/corepack
+          sudo rm -rf /opt/hostedtoolcache/node/corepack
+          sudo rm -rf "$(npm get prefix)/lib/node_modules/corepack"
+          sudo rm -rf /tmp/corepack-*
+          echo "清理完成时间: $(date)"  # 调试时间戳
 
-      - name: 设置 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - name: 设置 Node.js
+      - name: 安装Node.js（绕过Corepack）
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.18.1
+          disable-corepack: true  # 关键参数：禁用Corepack
           cache: pnpm
 
-      - name: 启用 Corepack
-        run: corepack enable
+      - name: 强制安装pnpm（直接npm安装）
+        run: |
+          npm install -g pnpm@9.0.5 --registry=https://registry.npmmirror.com
+          pnpm -v
 
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm install --frozen-lockfile --strict-peer-dependencies=false
+          pnpm store prune  # 清理无效存储
 
       - name: 构建文档
         env:
