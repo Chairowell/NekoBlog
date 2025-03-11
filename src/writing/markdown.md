@@ -92,7 +92,14 @@ OK，废话太多了，Let's Go *!*
 > :::
 >
 
-[>> 标题拓展知识 - 点击查看 <<](#标题)
+[>> 标题拓展知识 - 点击查看 <<](#_1-标题-1)
+
+
+### **2. 段落**
+
+根据内容划分成的部分，称为一个段落。段落划分是为了使文章更具可读性和逻辑性
+
+如果我们要创建一个段落，那么，我们需要在段落文字前后分别加上一行或多行空行。
 
 
 
@@ -135,22 +142,24 @@ OK，废话太多了，Let's Go *!*
   </tr>
   <tr>
     <td>
-<pre>
+<code class="language-markdown">
 一级标题
+<br>
 ===
-</pre>
+</code>
     </td>
-    <td><pre><code class="language-html">&lth1&gt一级标题&lt/h1&gt</code></pre></td>
+    <td><code class="language-html">&lth1&gt一级标题&lt/h1&gt</code></td>
     <td><h1>一级标题</h1></td>
   </tr>
   <tr>
     <td>
-<pre>
+<code class="language-markdown">
 二级标题
+<br>
 ---
-</pre>
+</code>
     </td>
-    <td><pre><code class="language-html">&lth2&gt二级标题&lt/h2&gt</code></pre></td>
+    <td><code class="language-html">&lth2&gt二级标题&lt/h2&gt</code></td>
     <td><h2>二级标题</h2></td>
   </tr>
 </table>
@@ -166,3 +175,4 @@ Markdown 文件通常以 `.md` 文件后缀结尾，也少有以 `.markdown` 后
 - [CommonMark](https://commonmark.org/)
 - [CommonMark规范](https://spec.commonmark.org/)
 - [Markdown 教程](https://markdown.com.cn/)
+- [基本撰写和格式语法 - GitHub 文档](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
