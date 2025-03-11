@@ -1,4 +1,3 @@
-
 name: 部署文档
 
 on:
@@ -7,47 +6,30 @@ on:
       - main
       - dev
 
-permissions:
-  contents: write
-
 jobs:
-  deploy-gh-pages:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
+    - name: Check out repository
+      uses: actions/checkout@v2
 
-      - name: 设置 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.x'
 
+    - name: Clear Corepack Cache
+      run: corepack clear
 
-      - name: 设置 Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+    - name: Set up Corepack
+      run: corepack enable
 
-      - name: 安装依赖
-        run: |
-          corepack enable
-          pnpm install --frozen-lockfile
+    - name: Install dependencies
+      run: corepack prepare pnpm@latest --activate
 
-      - name: 构建文档
-        env:
-          NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          pnpm run docs:build
-          > src/.vuepress/dist/.nojekyll
-
-      - name: 部署文档
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # 部署文档
-          branch: gh-pages
-          folder: src/.vuepress/dist
+    - name: Build and Deploy
+      run: |
+        pnpm install
+        pnpm run build
+        pnpm run deploy
