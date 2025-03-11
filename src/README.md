@@ -9,11 +9,10 @@ heroFullScreen: true
 bgImage: https://img.picgo.net/2024/09/07/ee616e79d7910502b35cfff3232b67091503002ae4b9bf348ea29d.png
 bgImageDark: https://img.picgo.net/2024/09/07/536b9ee68eb212bfdb0cc47d5740e35f1503006f897fca4ceec932.jpg
 tagline: ヾ(≧▽≦*)o 什么都想做馁喵~
-# projects:
-#   - icon: line-md:account
-#     name: Who am I?
-#     desc: 是一只栗子啊
-#     link: 
+projects:
+  - icon: mingcute:code-fill
+    name: Vue 学习笔记
+    link: /vue/
 
 #   - icon: link
 #     name: 链接名称
