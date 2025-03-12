@@ -1,5 +1,6 @@
 ---
 title: Vue 课程流程
+article: false
 category: 笔记
 tags:
   - Vue
