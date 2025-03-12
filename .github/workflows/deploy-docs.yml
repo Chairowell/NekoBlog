@@ -20,7 +20,7 @@ jobs:
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4
         with:
-          run_install: true
+          version: '10.6.2'
 
 
       - name: 设置 Node.js
