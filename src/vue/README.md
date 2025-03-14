@@ -1,5 +1,5 @@
 ---
-title: Vue 课程流程
+title: Vue 课程笔记
 article: false
 category: 笔记
 tags:
@@ -8,7 +8,7 @@ tags:
   - VS Code
 ---
 
-# Vue 课程流程
+# Vue 课程笔记
 
 1. vue基础
 2. vue-cli
