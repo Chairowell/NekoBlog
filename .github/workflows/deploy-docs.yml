@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: 检查仓库
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -22,7 +22,6 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: '10.6.2'
-
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
@@ -42,9 +41,9 @@ jobs:
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
 
-      - name: 部署文档
+      - name: 部署文档到 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # 部署文档
           branch: gh-pages
           folder: src/.vuepress/dist
+          token: ${{ secrets.NEKOBLOG_ACTION_TOKEN }}
