@@ -8,4 +8,11 @@ export default sidebar({
             children: "structure",
         }
     ],
+    "/graphql/": [
+        {
+            // text: GraphQL",
+            // icon: "logos:graphql",
+            children: "structure",
+        }
+    ],
 });

@@ -9,9 +9,8 @@ tags:
   - Games
   - Music
   - Novel
-star: 1
 isOriginal: true
-sticky: 1
+article: false
 navbar: false
 sidebar: false
 pageInfo: false

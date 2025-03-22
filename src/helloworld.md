@@ -1,7 +1,7 @@
 ---
 title: 这是一个测试页
 date: 2024-12-06 22:43:12
-timeline: false
+article: false
 ---
 虽然这是一个测试页，但你也可以在这里学习Markdown语法。
 

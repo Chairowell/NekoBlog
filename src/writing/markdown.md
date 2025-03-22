@@ -2,6 +2,7 @@
 title: Markdown 语法完全指南
 cover: assets/images/markdown.jpg
 date: 2025-01-13 00:00:00
+star: 2
 categories:
   - 教程
 tags:
