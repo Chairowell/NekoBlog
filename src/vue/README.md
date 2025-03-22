@@ -1,14 +1,15 @@
 ---
-title: Vue 课程笔记
-article: false
+title: Vue 学习笔记
+cover: assets/images/vue.jpeg
+icon: logos:vue
+# article: false
 category: 笔记
 tags:
   - Vue
   - 语法
-  - VS Code
 ---
 
-# Vue 课程笔记
+# Vue 学习笔记
 
 1. vue基础
 2. vue-cli

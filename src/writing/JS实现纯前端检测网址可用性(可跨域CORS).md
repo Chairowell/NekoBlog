@@ -1,12 +1,13 @@
 ---
 title: JS实现纯前端检测网址可用性(可跨域CORS)
 date: 2022-07-23
+cover: assets/images/javascript.png
+star: 1
 categories:
   - 经验总结
 tags:
   - Javascript
   - CORS
-star: 2
 ---
 
 # JS实现纯前端检测网址可用性(可跨域CORS)
