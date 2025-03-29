@@ -136,11 +136,14 @@ OK，废话太多了，Let's Go *!*
 
 
 <table>
+  <thead>
   <tr>
     <th>Markdown语法</th>
     <th>HTML</th>
     <th>效果预览</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>
 <code class="language-markdown">
@@ -163,6 +166,7 @@ OK，废话太多了，Let's Go *!*
     <td><code class="language-html">&lth2&gt二级标题&lt/h2&gt</code></td>
     <td><h2>二级标题</h2></td>
   </tr>
+  </tbody>
 </table>
 
 

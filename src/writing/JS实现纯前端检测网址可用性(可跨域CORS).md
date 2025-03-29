@@ -28,7 +28,7 @@ tags:
 
 前端发送网络请求，最快想到的就是 `XMLHttpRequest` 、`Ajax` 、`Fetch API` 这三兄弟了。通过发起网络请求，获取响应码，然后根据响应码判断是否可用。
 
-![响应码判断](./JS实现纯前端检测网址可用性(可跨域CORS).assets/01.png)
+![响应码判断](image/01.png)
 
 ### 用XMLHttpRequest发送请求
 
@@ -74,9 +74,9 @@ statusURL("https://www.google.com/");  // 被墙网站
 ```
 
 ::: details 查看运行结果
-![http://localhost:5500/](./JS实现纯前端检测网址可用性(可跨域CORS).assets/02.png)
-![https://www.baidu.com/](./JS实现纯前端检测网址可用性(可跨域CORS).assets/03.png)
-![https://www.google.com/](./JS实现纯前端检测网址可用性(可跨域CORS).assets/04.png)
+![http://localhost:5500/](image/02.png)
+![https://www.baidu.com/](image/03.png)
+![https://www.google.com/](image/04.png)
 :::
 
 ::: details **这里有一种更好的写法**
@@ -108,7 +108,7 @@ statusURL("https://www.baidu.com/");  // 未被墙网站
 statusURL("https://www.google.com/");  // 被墙网站
 ```
 
-![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/06.png)
+![运行结果](image/06.png)
 
 :::
 
@@ -116,7 +116,7 @@ statusURL("https://www.google.com/");  // 被墙网站
 
 但是向其他地址的服务器发请求时，发现浏览器抛出了CORS跨域错误，并没能实现我们需要的效果。
 
-![CORS跨域错误](./JS实现纯前端检测网址可用性(可跨域CORS).assets/05.png)
+![CORS跨域错误](image/05.png)
 
 - `CORS policy: No 'Access-Control-Allow-Origin'` 响应中缺少 Access-Control-Allow-Origin，浏览器阻止了该跨源请求。
 - `net::ERR_FAILED 200 (OK)` 在这里表示服务器响应成功，但是浏览器拒绝了访问。
@@ -185,7 +185,7 @@ statusURL("https://www.google.com/");  // 被墙网站
 ```
 ::: details 查看运行结果
 
-![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/07.png)
+![运行结果](image/07.png)
 
 :::
 
@@ -250,7 +250,7 @@ statusURL("https://www.baidu.com/");  // 未被墙网站
 statusURL("https://www.google.com/");  // 被墙网站
 ```
 ::: details 查看运行结果
-![运行结果](./JS实现纯前端检测网址可用性(可跨域CORS).assets/08.png)
+![运行结果](image/08.png)
 :::
 
 很遗憾的是 Fetch API 也遇到了跨域问题，原因依旧是浏览器默认不允许跨域请求。
@@ -306,7 +306,7 @@ run()
 
 下面我制作了一张流程图，来展示他的实现原理：
 
-![实现原理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/09.png)
+![实现原理](image/09.png)
 
 这个方法实在是太精妙了，不但可以检测可用性，还可以粗略的查看访问速度。啊，多是一件美事啊！
 
@@ -351,9 +351,9 @@ function checkTime(obj, startTime) {
 
 运行结果：
 
-![关闭V2rayN代理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/10.gif)
+![关闭V2rayN代理](image/10.gif)
 
-![开启V2rayN代理](./JS实现纯前端检测网址可用性(可跨域CORS).assets/11.gif)
+![开启V2rayN代理](image/11.gif)
 
 :::
 
