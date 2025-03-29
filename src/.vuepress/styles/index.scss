@@ -94,3 +94,9 @@
     transform: scale(1.1, 1.1);
     transition: transform var(--vp-t-transform);
 }
+.page-cover{
+    padding-top: 1rem;
+    @media screen and (max-width: 768px){
+        padding-top: 0;
+    }
+}
