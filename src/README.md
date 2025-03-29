@@ -6,8 +6,8 @@ title: 主页
 heroImage: NyanCat.gif
 heroText: NekoBlog
 heroFullScreen: true
-bgImage: https://img.picgo.net/2024/09/07/ee616e79d7910502b35cfff3232b67091503002ae4b9bf348ea29d.png
-bgImageDark: https://img.picgo.net/2024/09/07/536b9ee68eb212bfdb0cc47d5740e35f1503006f897fca4ceec932.jpg
+bgImage: /assets/wallpaper/821.avif
+bgImageDark: /assets/wallpaper/2158.avif
 tagline: ヾ(≧▽≦*)o 什么都想做馁喵~
 projects:
   - icon: logos:vue
