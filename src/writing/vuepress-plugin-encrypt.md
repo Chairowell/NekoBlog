@@ -290,7 +290,6 @@ export default defineConfig({
 })
 ```
 
-
 ### mode
 - Type: `string`
 - Required: `false`
