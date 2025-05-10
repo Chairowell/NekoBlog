@@ -1,5 +1,5 @@
 ---
-title: Vue 学习笔记
+title: Vue 笔记
 cover: assets/images/vue.jpeg
 icon: logos:vue
 # article: false
@@ -9,7 +9,7 @@ tags:
   - 语法
 ---
 
-# Vue 学习笔记
+# Vue 笔记
 
 1. vue基础
 2. vue-cli
