@@ -1,5 +1,5 @@
 ---
-title: Javascipt 复习笔记
+title: Javascipt 笔记
 cover: assets/images/javascript.jpg
 icon: logos:javascript
 # article: false
@@ -9,6 +9,4 @@ tags:
   - 语法
 ---
 
-# Javascript 复习笔记
-
-记录一下
+# Javascript 笔记

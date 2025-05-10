@@ -8,6 +8,13 @@ export default sidebar({
             children: "structure",
         }
     ],
+    "/study/css/": [
+        {
+            // text: "CSS",
+            // icon: "devicon:css3-wordmark",
+            children: "structure",
+        }
+    ],
     "/study/javascript/": [
         {
             // text: "Javascript",
