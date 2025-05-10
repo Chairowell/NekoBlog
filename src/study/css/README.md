@@ -1,6 +1,6 @@
 ---
 title: CSS 笔记
-cover: assets/images/
+cover: assets/images/css3.jpg
 icon: devicon:css3-wordmark
 # article: false
 category: 笔记

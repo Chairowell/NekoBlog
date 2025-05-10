@@ -1,10 +1,12 @@
 ---
 title: 如何用CSS给文本精准描边
 date: 2024-12-21
+article: false
 categories:
   - 经验总结
 tags:
   - CSS
+  - SCSS
 ---
 
 
