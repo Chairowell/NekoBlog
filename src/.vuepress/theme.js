@@ -72,6 +72,13 @@ export default hopeTheme({
     component: true,
     demo: true,
     footnote: true,
+    highlighter: {
+      type: "shiki",
+      notationFocus: true,
+      notationDiff: true,
+      notationHighlight: true,
+      notationErrorLevel: true,
+    },
     include: true,
     tabs: true,
     codeTabs: true,
