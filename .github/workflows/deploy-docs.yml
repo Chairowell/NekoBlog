@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - writing
+      - dev
 
 jobs:
   deploy:
