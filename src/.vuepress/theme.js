@@ -40,7 +40,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "",
+    description: "ヾ(≧▽≦*)o 什么都想做馁喵~",
     intro: "/intro.html",
     // sidebarDisplay: "mobile",
     // articlePerPage: 10,
@@ -171,61 +171,65 @@ export default hopeTheme({
     },
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cacheImage: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/demo/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
+    pwa: {
+      favicon: "/NyanCat.gif",
+      update: "available",
+      cacheHTML: true,
+      cacheImage: true,
+      appendBase: true,
+      apple: {
+        icon: "/assets/NyanCat.gif",
+        statusBarColor: "black-translucent",
+      },
+      msTile: {
+        image: "/assets/NyanCat.gif",
+        color: "#ffffff",
+      },
+      manifest: {
+        short_name: "NekoBlog",
+        description: "NekoBlog 这里都是好玩的~",
+        display: "fullscreen",
+        icons: [
+          {
+            src: "/assets/NyanCat.gif",
+            sizes: "512x512",
+            purpose: "maskable",
+            type: "image/gif",
+          },
+          {
+            src: "/assets/NyanCat.gif",
+            sizes: "192x192",
+            purpose: "maskable",
+            type: "image/gif",
+          },
+          {
+            src: "/assets/NyanCat.gif",
+            sizes: "512x512",
+            type: "image/gif",
+          },
+          {
+            src: "/assets/NyanCat.gif",
+            sizes: "192x192",
+            type: "image/gif",
+          },
+        ],
+        shortcuts: [
+          {
+            name: "NekoBlog",
+            short_name: "NekoBlog",
+            url: "/",
+            icons: [
+              {
+                src: "/assets/NyanCat.gif",
+                sizes: "192x192",
+                purpose: "maskable",
+                type: "image/gif",
+              },
+            ],
+          },
+        ],
+      },
+    },
 
     // 如果你需要幻灯片，安装 @vuepress/plugin-revealjs 并取消下方注释
     // revealjs: {
