@@ -2,7 +2,7 @@
 title: Vue 笔记
 cover: assets/images/vue.jpeg
 icon: logos:vue
-# article: false
+article: false
 category: 笔记
 tags:
   - Vue
