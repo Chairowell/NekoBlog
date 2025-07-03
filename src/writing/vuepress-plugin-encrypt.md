@@ -6,6 +6,7 @@ categories:
 tags: 
  - Vuepress
  - Plugin
+isOriginal: true
 ---
 # vuepress-plugin-encrypt
 一个 VuePress 插件，用于加密你在 VuePress 中的内容。
