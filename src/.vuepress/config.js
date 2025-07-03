@@ -18,7 +18,7 @@ export default defineUserConfig({
     metingPlugin({
       metingOptions: {
         global:true,
-        api: "https://api.qijieya.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r",
+        api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r",
         server: "netease",
         type: "playlist",
         mid: "6846157420",
