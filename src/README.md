@@ -1,6 +1,6 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: material-symbols:home-rounded
 title: 主页
 heroImage: NyanCat.gif
