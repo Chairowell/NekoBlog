@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>002 - Hello World !</title>
+    <title>002 - Hello World!</title>
 
-    <script type="text/javascript">
-        // 1. 使用 alert() 函数弹出提示框
-        alert("Hello World !");
+<!-- JS 代码需要编写写在 script 标签中 -->
+<script type="text/javascript">
+    // 1. 使用 alert() 函数弹出提示框
+    alert("Hello World!");
 
-        // 2. 使用 console.log() 函数在控制台输出信息
-        console.log("Hello World !");
-        
-        // 3. 使用 document.write() 函数在网页上输出信息
-        document.write("Hello World !");
-    </script>
+    // 2. 使用 document.write() 函数在网页上输出信息
+    document.write("Hello World!");
+
+    // 3. 使用 console.log() 函数在控制台输出信息
+    console.log("Hello World!");
+</script>
 
 </head>
 <body>
     
+<!-- 或者编写在标签的 onclick 事件属性中 -->
+<button onclick="alert('我被点击了')">点击我</button>
+
+<!-- 或者编写在超链接的 href 属性中 -->
+<a href="javascript:alert('超链接被点击了');">点击超链接</a>
+<a href="javascript:;">这是一个没有任何效果的超链接</a>
+
+<!-- 或者编写在外部 JS 文件中 -->
+<script src="./002.js"></script>
+
+<!-- 思考：在引入外部 JS 文件后，同一个标签里编写的 JS 代码还会被执行吗？ -->
+<script src="./002.js">
+    alert("我是 HTML 内的 JS 代码");
+</script>
+
+
 </body>
 </html>
