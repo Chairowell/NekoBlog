@@ -2,7 +2,6 @@
 title: GraphQL 笔记
 cover: assets/images/graphql.png
 icon: logos:graphql
-article: false
 category: 笔记
 tags:
   - GraphQL

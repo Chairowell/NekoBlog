@@ -50,7 +50,7 @@ pnpm add -g @cloudflare/wrangler
 ## 创建一个 Worker
 
 ```bash:no-line-numbers
-wrangler generate [(必)你的项目名称] [(选)模板仓库地址]
+wrangler generate <你的项目名称> [模板仓库地址]
 ```
 
 例如：

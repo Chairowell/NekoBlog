@@ -27,7 +27,12 @@ projects:
 
   - icon: logos:graphql
     name: GraphQL 笔记
-    desc: 开的新坑
+    desc: 新坑
     link: /study/graphql/
+
+  - icon: devicon:cloudflare
+    name: Cloudflare 实战
+    desc: 新坑
+    link: /study/cloudflare/
 
 ---
